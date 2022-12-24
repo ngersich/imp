@@ -2,10 +2,11 @@ import './App.css';
 import {Route, Routes} from 'react-router-dom';
 import React from 'react';
 import {createTheme, ThemeProvider} from '@mui/material';
-import Styles from './Screens/Styles';
-import { fontWeight } from '@mui/system';
-import Header from './Components/Header/Header';
-
+import About from './Screens/About';
+import HowToJoin from './Screens/HowToJoin';
+import Mission from './Screens/Mission';
+import Overview from './Screens/Overview';
+import Recognition from './Screens/Recognition';
 
 const theme = createTheme({
   palette: {
@@ -32,8 +33,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
-        <Route path='/' element={<Styles/>} />
-        <Route path="/header" element={<Header currentPage="How to Join"/>} />
+        <Route path='/' element={<About/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/join' element={<HowToJoin/>} />
+        <Route path='/mission' element={<Mission/>} />
+        <Route path='/overview' element={<Overview/>} />
+        <Route path='/recognition' element={<Recognition/>} />
       </Routes>
     </ThemeProvider>
   );
