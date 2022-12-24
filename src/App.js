@@ -7,6 +7,7 @@ import HowToJoin from './Screens/HowToJoin';
 import Mission from './Screens/Mission';
 import Overview from './Screens/Overview';
 import Recognition from './Screens/Recognition';
+import Styles from './Screens/Styles';
 
 const theme = createTheme({
   palette: {
@@ -19,8 +20,8 @@ const theme = createTheme({
     },
   },
   typography: {
-    h2: {
-      color: "#13294C",
+    body1: {
+      fontSize: '1.3rem'
     },
     h3: {
       color: "#13294C",
@@ -33,6 +34,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
+        <Route path='/styles' element={<Styles />} />
         <Route path='/' element={<About/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/join' element={<HowToJoin/>} />

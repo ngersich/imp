@@ -8,8 +8,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
-import Item from '@mui/material/ListItem'
-import { Backdrop } from "@mui/material";
 import ImpLogo from './IMPLogo.png';
 import './Header.css';
 import { useNavigate } from "react-router-dom";
@@ -43,7 +41,6 @@ function Header(props) {
     }
   };
 
-  const [anchorElNav, setAnchorElNav] = useState(null);
   const [backdrop, setBackdrop] = useState(false);
 
   const handleBackdropClose = () => {
@@ -57,15 +54,6 @@ function Header(props) {
   const handleBackdropSwitch = () => {
     setBackdrop((prev) => !prev);
   }
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-    console.log(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
 
   return (
@@ -114,7 +102,6 @@ function Header(props) {
               <Button
                 key={page}
                 onClick={(() => {
-                  handleCloseNavMenu();
                   handleNavigation(page);
                 })}
                 sx={props.currentPage === page ? 
@@ -141,10 +128,9 @@ function Header(props) {
               <Button
                 key={page}
                 onClick={(() => {
-                  handleCloseNavMenu();
                   handleNavigation(page);
                 })}
-                sx={{my: 2, color: 'white', display: 'block'}}
+                sx={{my: 2, color: 'white', display: 'block', fontSize: '1.4rem'}}
               >
                 {page}
               </Button>
