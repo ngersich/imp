@@ -4,6 +4,7 @@ import React from 'react';
 import {createTheme, ThemeProvider} from '@mui/material';
 import Styles from './Screens/Styles';
 import { fontWeight } from '@mui/system';
+import Header from './Components/Header/Header';
 
 
 const theme = createTheme({
@@ -13,6 +14,7 @@ const theme = createTheme({
     },
     secondary: {
       main: '#dc5034',
+      contrastText: "#fff"
     },
   },
   typography: {
@@ -31,6 +33,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Routes>
         <Route path='/' element={<Styles/>} />
+        <Route path="/header" element={<Header currentPage="How to Join"/>} />
       </Routes>
     </ThemeProvider>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 
 function Styles() {
 
@@ -52,6 +52,8 @@ function Styles() {
             <Typography variant="overline" display="block" gutterBottom>
                 overline text
             </Typography>
+
+            <Button color="secondary" variant="contained">Example Button</Button>
         </Box>
     );
 }
