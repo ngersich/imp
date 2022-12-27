@@ -11,6 +11,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ImpLogo from './IMPLogo.png';
 import { useNavigate } from "react-router-dom";
 import { Stack } from "@mui/system";
+import { Typography } from "@mui/material";
 
 const pages = ['About IMP', 'Our Mission', 'Recognition', 'Program Overview', 'How to Join'];
 
@@ -66,12 +67,12 @@ function Header(props) {
           <Box
             component="img"
             alt="logo"
-            sx={{height: "80%", cursor: "pointer"}}
+            sx={{height: "80%", cursor: "pointer", marginRight: "30px", display: {xs: 'none', md: 'none', lg: 'flex'}}}
             src={ImpLogo}
             onClick={() => handleNavigation("")}
           />
-          {/* <Typography
-            variant="h6"
+          <Typography
+            variant="h5"
             noWrap
             component="a"
             href="/"
@@ -79,11 +80,10 @@ function Header(props) {
               mr: 2,
               display: 'flex',
               color: 'inherit',
-              textDecoration: 'none',
+              textDecoration: 'none'
             }}
-          >
-            Illini Mentor Program
-          </Typography> */}
+          >Illini Mentor Program
+          </Typography>
           <Box sx={{flexGrow: 1}} />
 
           <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
