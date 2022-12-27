@@ -9,7 +9,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import ImpLogo from './IMPLogo.png';
-import './Header.css';
 import { useNavigate } from "react-router-dom";
 import { Stack } from "@mui/system";
 
@@ -36,6 +35,9 @@ function Header(props) {
       case 'How to Join':
         navigate("/join");
         break;
+      case "":
+        navigate("/");
+        break;
       default:
         break;
     }
@@ -47,9 +49,9 @@ function Header(props) {
     setBackdrop(false);
   }
 
-  const handleBackdropOpen = () => {
-    setBackdrop(true);
-  }
+  // const handleBackdropOpen = () => {
+  //   setBackdrop(true);
+  // }
 
   const handleBackdropSwitch = () => {
     setBackdrop((prev) => !prev);
@@ -64,9 +66,9 @@ function Header(props) {
           <Box
             component="img"
             alt="logo"
-            sx={{height: "80%"}}
+            sx={{height: "80%", cursor: "pointer"}}
             src={ImpLogo}
-            onClick={() => handleNavigation("About IMP")}
+            onClick={() => handleNavigation("")}
           />
           {/* <Typography
             variant="h6"

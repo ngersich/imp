@@ -8,6 +8,9 @@ import Mission from './Screens/Mission';
 import Overview from './Screens/Overview';
 import Recognition from './Screens/Recognition';
 import Styles from './Screens/Styles';
+import ImageGroup from './Components/ImageGroup/ImageGroup';
+import MasonryImageList from './Components/ImageGroup/ImageGroup2';
+import Footer from './Components/Footer/Footer';
 
 const theme = createTheme({
   palette: {
@@ -21,11 +24,19 @@ const theme = createTheme({
   },
   typography: {
     body1: {
-      fontSize: '1.3rem'
+      fontSize: '1.2rem'
     },
     h3: {
       color: "#13294C",
       fontWeight: 500
+    },
+    h5: {
+      color: "#ffffff"
+    },
+    h6: {
+      color: "#dc5034",
+      fontWeight: 400,
+      fontSize: "0.98rem"
     }
   }
 });
@@ -41,6 +52,9 @@ function App() {
         <Route path='/mission' element={<Mission/>} />
         <Route path='/overview' element={<Overview/>} />
         <Route path='/recognition' element={<Recognition/>} />
+        <Route path='/imagegroup' element={<ImageGroup />} />
+        <Route path='/imagelist' element={<MasonryImageList/>} />
+        <Route path='/footer' element={<Footer />} />
       </Routes>
     </ThemeProvider>
   );
