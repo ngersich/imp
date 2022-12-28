@@ -24,7 +24,7 @@ const theme = createTheme({
   },
   typography: {
     body1: {
-      fontSize: '1.2rem'
+      fontSize: '1.1rem'
     },
     h3: {
       color: "#13294C",
