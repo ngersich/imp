@@ -25,21 +25,21 @@ export default function SiteCard(props) {
   useEffect(() => {
     switch(props.siteNum) {
       case 0: 
-        setSiteName("Don Moyer Boys and Girls Club");
+        setSiteName("Don Moyer Boys & Girls Club");
         setSiteImage(DonMoyerImage);
         setSiteDescription("(Saturday Program)");
         setSiteDescriptionEx("Saturday (9:45 a.m. – 12:00 noon)\nMentees: 8-10 y/o\n201 E. Park Street, P.O. Box 1396\nChampaign, IL 61824\nPhone: (217) 355-5437");
         setLinkName("https://www.dmbgc-cu.org/");
         break;
       case 1:
-        setSiteName("Dr. Williams Elementary School");
+        setSiteName("Dr. Williams Elementary");
         setSiteImage(DrWilliamsImage);
         setSiteDescription("(Tue & Wed Program)");
         setSiteDescriptionEx("Tue and Wed (2:45 p.m. – 5:00 p.m.)\nMentees: 3rd-5th grade\n2102 E. Washington St\nUrbana, IL 61802\nPhone: (217) 384-3628");
         setLinkName("https://drwilliams.usd116.org/");
         break;
       case 2:
-        setSiteName("Thomas Paine Elementary School");
+        setSiteName("Thomas Paine Elementary");
         setSiteImage(ThomasPaineImage);
         setSiteDescription("(Wednesday Program)");
         setSiteDescriptionEx("Wednesday (2:45 p.m. - 5:00 p.m)\nMentees: 3rd-5th grade\n1801 James Cherry Dr\nUrbana, IL 61802\nPhone: (217) 384-3602​");
@@ -55,7 +55,7 @@ export default function SiteCard(props) {
   return (
     <div className='main'>
     <div className={flipped ? 'flipped' : ''}>
-    <Card sx={{width: 390, height: 310, backgroundColor: "#e8e8e8", borderRadius: '10px'}} className='regular-card'>
+    <Card sx={{width: 350, height: 310, backgroundColor: "#e8e8e8", borderRadius: '10px'}} className='regular-card'>
       <CardActionArea onClick={handleCardFlip}>
         <Stack alignItems="center">
             <Typography gutterBottom variant="h5" color="secondary" component="div" sx={{fontWeight: 'bold', marginTop: '10px'}}>
@@ -78,7 +78,7 @@ export default function SiteCard(props) {
       </CardActionArea>
     </Card>
 
-    <Card sx={{ width: 390, height: 310, backgroundColor: "#e8e8e8", borderRadius: '10px'}} className='flipped-card'>
+    <Card sx={{ width: 350, height: 310, backgroundColor: "#e8e8e8", borderRadius: '10px'}} className='flipped-card'>
       <CardActionArea onClick={handleCardFlip} sx={{height: '100%'}}>
         <Stack alignItems="center" sx={{margin: 0, height: '100%'}}>
             <Typography gutterBottom variant="h5" color="secondary" component="div" sx={{fontWeight: 'bold', marginTop: '10px'}}>
