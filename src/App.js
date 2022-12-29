@@ -3,13 +3,11 @@ import {Route, Routes} from 'react-router-dom';
 import React from 'react';
 import {createTheme, ThemeProvider} from '@mui/material';
 import About from './Screens/About/About';
-import HowToJoin from './Screens/HowToJoin';
+import HowToJoin from './Screens/HowToJoin/HowToJoin';
 import Mission from './Screens/Mission';
 import Overview from './Screens/Overview';
 import Recognition from './Screens/Recognition';
 import Styles from './Screens/Styles';
-import SiteCards from './Components/SiteCard/SiteCards';
-import ImageGroup from './Components/ImageGroup/ImageGroup';
 import Gallery from './Screens/Gallery';
 import Footer from './Components/Footer/Footer';
 
@@ -51,8 +49,6 @@ function App() {
         <Route path='/mission' element={<Mission/>} />
         <Route path='/overview' element={<Overview/>} />
         <Route path='/recognition' element={<Recognition/>} />
-        <Route path='/sitecard' element={<SiteCards />} />
-        <Route path='/images' element={<ImageGroup />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/footer' element={<Footer />} />
       </Routes>

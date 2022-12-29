@@ -1,0 +1,12 @@
+.orderedListStyle {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.orderedListEl {
+    margin-top: 15px;
+}
+
+.listHeading {
+    font-weight: 500;
+}
