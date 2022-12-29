@@ -1,0 +1,25 @@
+.main {
+    position: relative;
+}
+
+.main .regular-card {
+    position: absolute;
+    transform: rotateY(0deg);
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+}
+
+.flipped .regular-card {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
+
+.main .flipped-card {
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+}
+
+.flipped .flipped-card {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}

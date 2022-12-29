@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Components/Footer/Footer";
 import Header from "../Components/Header/Header";
-import { Box, Typography, Container, Stack } from '@mui/material';
+import { Box, Typography, Stack } from '@mui/material';
 import MissionImages from "../Components/ImageGroup/Images/Mission/MissionImages";
 
 function Mission() {

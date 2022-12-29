@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Components/Header/Header";
-import { Stack, Typography, Box, List } from '@mui/material';
+import { Stack, Typography, Box } from '@mui/material';
 import Footer from "../Components/Footer/Footer";
 import RecognitionImage from '../Components/ImageGroup/Images/Recognition/recognition.jpg';
 
