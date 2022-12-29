@@ -9,9 +9,9 @@ import Overview from './Screens/Overview';
 import Recognition from './Screens/Recognition';
 import Styles from './Screens/Styles';
 import SiteCards from './Components/SiteCard/SiteCards';
-import MasonryImageList from './Components/ImageGroup/MasonryImageList';
 import ImageGroup from './Components/ImageGroup/ImageGroup';
 import Gallery from './Screens/Gallery';
+import Footer from './Components/Footer/Footer';
 
 
 const theme = createTheme({
@@ -54,6 +54,7 @@ function App() {
         <Route path='/sitecard' element={<SiteCards />} />
         <Route path='/images' element={<ImageGroup />} />
         <Route path='/gallery' element={<Gallery />} />
+        <Route path='/footer' element={<Footer />} />
       </Routes>
     </ThemeProvider>
   );

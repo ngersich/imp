@@ -1,16 +1,12 @@
-import React from "react";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import {TextField} from "@mui/material";
+import React, { useState } from "react";
+import { AppBar, Box, Toolbar, Container, Button, TextField, Stack, Typography, Alert, Collapse, IconButton } from '@mui/material';
 import ImpLogo from './IMPLogo.png';
+import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from "react-router-dom";
-import { Stack } from "@mui/system";
-import { Typography } from "@mui/material";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { makeStyles } from "@mui/styles";
+import axios from "axios";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,15 +38,60 @@ const useStyles = makeStyles((theme) => ({
 function Footer(props) {
 
   const classes = useStyles();
-
   let navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [alertType, setAlertType] = useState("");
+  const [alertOpen, setAlertOpen] = useState(false);
+  const [alertText, setAlertText] = useState("");
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
   const instagramUrl = "https://www.instagram.com/impuofi/";
   const handleInstagram = () => {
     window.open(instagramUrl, '_blank', 'noopener,noreferrer');
   };
 
+  const handleSignUp = () => {
+    axios.post('https://sheet.best/api/sheets/b89e1a2d-0124-4f12-b1ee-3ff8cb956a7e', {"email": email})
+    .then(response => {
+      setAlertOpen(true);
+      setAlertType("success");
+      setAlertText("Email was successfully added to our mailing list.");
+      setEmail("");
+    }).catch( e => {
+      setAlertOpen(true);
+      setAlertType("error");
+      setAlertText("There was an error processing your email. If the issue persists, please contact impuofi@gmail.com or check back later when applications open.")
+    })
+  };
+
+
   return (
     <Box sx={{height: 'maxHeight'}}>
+    <Collapse in={alertOpen}>
+        <Alert
+        severity={alertType}
+        variant="filled"
+        action={
+            <IconButton
+            aria-label="close"
+            color="inherit"
+            size="small"
+            onClick={() => {
+                setAlertOpen(false);
+            }}
+            >
+            <CloseIcon fontSize="inherit" />
+            </IconButton>
+        }
+        sx={{ mb: 2 }}
+        >
+        {alertText}
+        </Alert>
+    </Collapse>
     <AppBar position="static" sx={{display: {xs: 'none', md: 'flex'}}}>
        <Container maxWidth="xl" >
         <Toolbar disableGutters sx={{height: "140px"}}>
@@ -78,13 +119,13 @@ function Footer(props) {
                 </Stack>
             </Stack>
           </Stack>
-          <Stack spacing={.5} >
+          <Stack spacing={.5} sx={{width: '400px'}} >
             <Typography variant="h5">Stay informed</Typography>
-            <Typography variant="body2">Enter your email to receive updates when applications open.</Typography>
+            <Typography variant="body2">Enter your email to be added to our mailing list.</Typography>
             <Box height="1px"></Box>
             <Stack direction="row" justifyContent="space-between">
-                <TextField variant="filled" label="Email Address" size="small" className={classes.root} sx={{width: "75%"}}  />
-                <Button color="secondary" variant="contained">Sign Up</Button>
+                <TextField variant="filled" label="Email Address" size="small" value={email} onChange={handleEmailChange} className={classes.root} sx={{width: "75%"}}  />
+                <Button color="secondary" variant="contained" onClick={handleSignUp}>Sign Up</Button>
             </Stack>
           </Stack>
           </Stack>
@@ -118,13 +159,13 @@ function Footer(props) {
                 </Stack>
             </Stack>
 
-        <Stack alignItems="center" sx={{width: "95%", maxWidth: "500px"}} >
+        <Stack alignItems="center" sx={{width: '95%', maxWidth: "500px"}} >
             <Typography variant="h5" sx={{marginTop: "25px", marginBottom: "5px"}}>Stay informed</Typography>
-            <Typography variant="body2" textAlign="center">Enter your email to receive updates when applications open.</Typography>
+            <Typography variant="body2" textAlign="center" value={email} onChange={handleEmailChange} >Enter your email to be added to our mailing list.</Typography>
             <Box height="5px"></Box>
             <Stack direction="row" justifyContent="space-between" width="100%">
                 <TextField variant="filled" label="Email Address" size="small" className={classes.root} sx={{width: "100%"}}  />
-                <Button color="secondary" variant="contained" sx={{width: "120px", marginLeft: "15px"}}>Sign Up</Button>
+                <Button color="secondary" variant="contained" sx={{width: "120px", marginLeft: "15px"}} onClick={handleSignUp}>Sign Up</Button>
             </Stack>
         </Stack>
 
