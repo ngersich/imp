@@ -3,25 +3,11 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Images from './Images/Images';
-import { ThemeProvider, useMediaQuery } from '@mui/material';
-import { useTheme, createTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
-const theme = createTheme();
 
 export default function MasonryImageList() {
-  const theme = useTheme();
-  const small = useMediaQuery(theme.breakpoints.up)
-
-  return (
-    <ThemeProvider theme={theme}>
-      <ImageListHelper />
-    </ThemeProvider>
-  )
-
-  
-}
-
-function ImageListHelper() {
 
   const theme = useTheme();
   const small = useMediaQuery(theme.breakpoints.down('sm'));
@@ -44,4 +30,5 @@ function ImageListHelper() {
       </ImageList>
     </Box>
   );
+  
 }
