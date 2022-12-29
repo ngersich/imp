@@ -2,13 +2,15 @@ import './App.css';
 import {Route, Routes} from 'react-router-dom';
 import React from 'react';
 import {createTheme, ThemeProvider} from '@mui/material';
-import About from './Screens/About';
+import About from './Screens/About/About';
 import HowToJoin from './Screens/HowToJoin';
 import Mission from './Screens/Mission';
 import Overview from './Screens/Overview';
 import Recognition from './Screens/Recognition';
 import Styles from './Screens/Styles';
 import SiteCards from './Components/SiteCard/SiteCards';
+import MasonryImageList from './Components/ImageGroup/ImageGroup2';
+import ImageGroup from './Components/ImageGroup/ImageGroup';
 
 
 const theme = createTheme({
@@ -49,6 +51,7 @@ function App() {
         <Route path='/overview' element={<Overview/>} />
         <Route path='/recognition' element={<Recognition/>} />
         <Route path='/sitecard' element={<SiteCards />} />
+        <Route path='/images' element={<ImageGroup />} />
       </Routes>
     </ThemeProvider>
   );

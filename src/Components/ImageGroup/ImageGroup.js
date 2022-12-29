@@ -1,37 +1,16 @@
 import React from "react";
 import Carousel from 'react-material-ui-carousel'
-import { Box, Button } from '@mui/material'
+import { Box } from '@mui/material'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import Images from './Images/Images';
-import { maxHeight } from "@mui/system";
+import LandscapeImages from "./Images/LandscapeImages";
 
 
-function ImageGroup()
-{
-    var items = [
-        {
-            name: "Random Name #1",
-            description: "Probably the most random thing you have ever seen!"
-        },
-        {
-            name: "Random Name #2",
-            description: "Hello World!"
-        },
-        {
-            name: "Random Name #3",
-            descirption: "Hello world 3"
-        },
-        {
-            name: "Random Name #4",
-            description: "Hello world 4"
-        }
-    ]
+function ImageGroup() {
 
     return (
-        <Box >
         <Carousel
-            sx={{width: {xs: '100%', md: '500px'}, maxHeight: '500px'}}
+            sx={{width: '90%', maxWidth: '700px'}}
             indicators={false}
             navButtonsAlwaysVisible={true}
 
@@ -39,11 +18,10 @@ function ImageGroup()
             PrevIcon={<ArrowBackIosNewIcon/>}            
         >
             {
-                Images.map( (image) => <Im src={image}/>)
+                LandscapeImages.map( (image) => <Im key={image} src={image}/>)
                 //items.map( (item, i) => <Item key={i} item={item} /> )
             }
         </Carousel>
-        </Box>
     );
 }
 
@@ -53,8 +31,9 @@ function Im(props) {
             component="img"
             alt="IMP image"
             src={props.src}
-            maxWidth={{xs: 'none', md: '500px'}}
-            width={{xs: '100%'}}
+            //maxWidth={{xs: 'none', md: '700px'}}
+            width="100%"
+            borderRadius={10}
         >
 
         </Box>
