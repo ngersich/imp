@@ -50,7 +50,6 @@ function App() {
         <Route path='/overview' element={<Overview/>} />
         <Route path='/recognition' element={<Recognition/>} />
         <Route path='/gallery' element={<Gallery />} />
-        <Route path='/footer' element={<Footer />} />
       </Routes>
     </ThemeProvider>
   );
