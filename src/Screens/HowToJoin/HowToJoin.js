@@ -13,7 +13,7 @@ function HowToJoin() {
                 <Typography variant="h3" textAlign='center'>How to Join IMP</Typography>
                 <Typography variant="h4" textAlign="center" color="primary"><i>Spring 2023</i></Typography>
                 <Stack alignItems="center">
-                    <Stack>
+                    <Stack sx={{width: {xs: '100%', md: '80%'}}}>
                         <ol className="orderedListStyle">
                             <li className="orderedListEl"><Typography className="listHeading" variant="h5">Attend an info session (optional):</Typography></li>
                             <ul>
@@ -35,11 +35,12 @@ function HowToJoin() {
                             <li className="orderedListEl"><Typography variant="h5" className="listHeading" >Fill out either the New Mentor Application or the Returning Mentor Application.</Typography></li>
                             <li className="orderedListEl"><Typography variant="h5" className="listHeading" >Attend your interview if invited.</Typography></li>
                         </ol>
+                        <Typography variant="body1" color="secondary" sx={{fontWeight: '500', fontSize: '1.2rem'}}>Shortly after, we will send out final decisions! If accepted to the program, mentoring day placements will be announced at our first MD meeting.</Typography>
                     </Stack>
-                    <Box component="img" alt="join_img" src={JoinImage} sx={{width: '80%', maxWidth: '500px', borderRadius: '10px', marginTop: '30px'}} />
+                    <Box component="img" alt="join_img" src={JoinImage} sx={{width: '80%', maxWidth: '500px', borderRadius: '10px', marginTop: '50px'}} />
                 </Stack>
             </Stack>
-            <Box height='100px' />
+            <Box height='80px' />
             <Footer />
         </Box>
     );
