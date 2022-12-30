@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
 import { Box, Stack, Typography, Link } from '@mui/material';
-import JoinImage from '../../Components/ImageGroup/Images/About/IMG_0434.JPG';
+import JoinImage from '../../Components/ImageGroup/Images/About/IMG_0434.jpeg';
 import './HowToJoin.css';
 import Footer from "../../Components/Footer/Footer";
 
