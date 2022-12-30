@@ -9,7 +9,6 @@ import Overview from './Screens/Overview';
 import Recognition from './Screens/Recognition';
 import Styles from './Screens/Styles';
 import Gallery from './Screens/Gallery';
-import Footer from './Components/Footer/Footer';
 
 
 const theme = createTheme({
