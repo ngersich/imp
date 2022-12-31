@@ -14,7 +14,7 @@ export default function MasonryImageList() {
   const medium = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
-    <Box sx={{ width: '100%', height: 500, overflowY: 'scroll' }}>
+    <Box sx={{ width: '100%', height: 700, overflowY: 'scroll' }}>
       <ImageList variant="masonry" cols={small ? 2 : (medium ? 3 : 4)} gap={8} >
         
         {Images.map((item) => (

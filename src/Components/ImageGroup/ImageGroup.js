@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Carousel from 'react-material-ui-carousel'
 import { Box } from '@mui/material'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -8,11 +8,27 @@ import LandscapeImages from "./Images/LandscapeImages";
 
 function ImageGroup() {
 
+    const [time, setTime] = useState(100);
+    const [duration, setDuration] = useState(0);
+    const [start, setStart] = useState(false);
+    const [index, setIndex] = useState(Math.floor(Math.random() * LandscapeImages.length));
+
     return (
         <Carousel
             sx={{width: '90%', maxWidth: '700px'}}
             indicators={false}
             navButtonsAlwaysVisible={true}
+            interval={time}
+
+            next = {() => {
+                if (!start) {
+                    setTime(4000);
+                    setDuration(500);
+                    setStart(true);
+                }
+            }}
+            index={index}
+            duration={duration}
 
             NextIcon={<ArrowForwardIosIcon/> }          
             PrevIcon={<ArrowBackIosNewIcon/>}            
