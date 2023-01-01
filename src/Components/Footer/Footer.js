@@ -161,10 +161,10 @@ function Footer(props) {
 
         <Stack alignItems="center" sx={{width: '95%', maxWidth: "500px"}} >
             <Typography variant="h5" sx={{marginTop: "25px", marginBottom: "5px"}}>Stay informed</Typography>
-            <Typography variant="body2" textAlign="center" value={email} onChange={handleEmailChange} >Enter your email to be added to our mailing list.</Typography>
+            <Typography variant="body2" textAlign="center" >Enter your email to be added to our mailing list.</Typography>
             <Box height="5px"></Box>
             <Stack direction="row" justifyContent="space-between" width="100%">
-                <TextField variant="filled" label="Email Address" size="small" className={classes.root} sx={{width: "100%"}}  />
+                <TextField variant="filled" label="Email Address" size="small" className={classes.root} sx={{width: "100%"}} value={email} onChange={handleEmailChange}  />
                 <Button color="secondary" variant="contained" sx={{width: "120px", marginLeft: "15px"}} onClick={handleSignUp}>Sign Up</Button>
             </Stack>
         </Stack>
