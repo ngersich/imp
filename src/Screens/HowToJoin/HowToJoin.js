@@ -32,7 +32,6 @@ function HowToJoin() {
                             <ul>
                                 <li><Typography variant="body1" color="text.secondary">Applications currently unavailable.</Typography></li>
                             </ul>
-                            <li className="orderedListEl"><Typography variant="h5" className="listHeading" >Fill out either the New Mentor Application or the Returning Mentor Application.</Typography></li>
                             <li className="orderedListEl"><Typography variant="h5" className="listHeading" >Attend your interview if invited.</Typography></li>
                         </ol>
                         <Typography variant="body1" color="secondary" sx={{fontWeight: '500', fontSize: '1.2rem'}}>Shortly after, we will send out final decisions! If accepted to the program, mentoring day placements will be announced at our first MD meeting.</Typography>
