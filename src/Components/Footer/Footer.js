@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { makeStyles } from "@mui/styles";
 import axios from "axios";
+import validator from 'validator';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -55,6 +56,14 @@ function Footer(props) {
   };
 
   const handleSignUp = () => {
+
+    if (!validator.isEmail(email)) {
+      setAlertOpen(true);
+      setAlertType("error");
+      setAlertText("Please enter a valid email address.");
+      return;
+    }
+
     axios.post('https://sheet.best/api/sheets/b89e1a2d-0124-4f12-b1ee-3ff8cb956a7e', {"email": email})
     .then(response => {
       setAlertOpen(true);

@@ -59,7 +59,7 @@ function Exec() {
                     </Stack>
                 </Box>
 
-                <Box>
+                <Box paddingLeft='5px'>
                     <Stack alignItems="center" display={{xs: 'inline', md: 'none', lg: 'none'}}>
                         {ExecMembers.map((member, i) => {
                             return (
