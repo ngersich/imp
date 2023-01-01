@@ -65,7 +65,7 @@ export default function SiteCard(props) {
             <CardMedia
             component="img"
             image={siteImage}
-            alt="green iguana"
+            alt="site"
             sx={{maxWidth: '270px', maxHeight: '200px', borderRadius: '10px'}}
             />
             <CardContent>
