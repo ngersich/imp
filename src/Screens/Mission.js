@@ -3,6 +3,7 @@ import Footer from "../Components/Footer/Footer";
 import Header from "../Components/Header/Header";
 import { Box, Typography, Stack } from '@mui/material';
 import MissionImages from "../Components/ImageGroup/Images/Mission/MissionImages";
+import Recognition from './Recognition';
 
 function Mission() {
     return (
@@ -30,7 +31,10 @@ function Mission() {
                     <Typography variant="body1">As a co-curricular service-learning organization, IMP provides opportunities for Illinois students to learn more about the community and to explore their strengths and build leadership skills as they take an active role in promoting positive youth development. <i>IMP’s mission includes engaging students in the process of building bridges between the University of Illinois and the surrounding community, which can lead to productive and mutually beneficial dialogue, capacity-building, and a commitment to civic responsibility.</i></Typography>
 
             </Stack>
-            <Box height={'50px'} />
+            <Box height={'20px'} />
+            <Recognition />
+            <Box height={'100px'} />
+
             <Footer />
         </Box>
     );

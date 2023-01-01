@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../Components/Header/Header";
+// import Header from "../Components/Header/Header";
 import { Stack, Typography, Box } from '@mui/material';
-import Footer from "../Components/Footer/Footer";
+// import Footer from "../Components/Footer/Footer";
 import RecognitionImage from '../Components/ImageGroup/Images/Recognition/recognition.jpg';
 
 function Recognition() {
     return (
         <Box>
-            <Header currentPage="Recognition"/>
+            {/* <Header currentPage="Recognition"/> */}
             <Stack spacing={2} marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop='30px' alignItems="center" >
                     <Typography variant="h3" textAlign='center'>Recognition</Typography>
                     <Typography variant="body1" >IMP strives for excellence as a learning organization and is committed to best practices in mentoring and community engagement. We have been privileged to receive the following honors and appreciate the support and recognition we’ve received from our community partners.</Typography>
@@ -44,8 +44,8 @@ function Recognition() {
                     </Stack>
 
             </Stack>
-                <Box height={'50px'} />
-            <Footer />
+                {/* <Box height={'50px'} />
+            <Footer /> */}
         </Box>
     );
 }

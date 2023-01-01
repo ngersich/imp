@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import GraceImage from '../Components/ImageGroup/Images/Exec/grace.jpeg';
 import {Box, Stack, Typography} from '@mui/material';
 import ExecCard from "../Components/ExecCard/ExecCard";
 import ExecMembers from "../Components/ExecCard/ExecMembers";
-import Grid from "@mui/material";
+import Header from "../Components/Header/Header";
+import Footer from "../Components/Footer/Footer";
 
 function Exec() {
     useEffect(() => {
@@ -11,6 +11,7 @@ function Exec() {
     }, []);
     return (
         <Box>
+            <Header currentPage='Executive Board' />
             <Stack spacing={2} marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop='30px' alignItems="center" >
                 <Typography variant="h3" textAlign='center' >Executive Board</Typography>
                 <Typography variant="body1" fontSize="1.3rem" textAlign="center" display={{xs: 'none', md: 'inline'}}>Hover over each picture for more information!</Typography>
@@ -21,13 +22,13 @@ function Exec() {
                     <Box height={80} />
                     <Stack direction="row" justifyContent="space-evenly" sx={{width: '100%'}} >
                         {ExecMembers.slice(1, 6).map((member) => {
-                            {return <ExecCard color="primary" person={member} hover={true} />}
+                            return <ExecCard color="primary" person={member} hover={true} />
                         })}
                     </Stack>
                     <Box height={80} />
                     <Stack direction="row" justifyContent="space-evenly" sx={{width: '100%'}} >
                         {ExecMembers.slice(6, 12).map((member) => {
-                            {return <ExecCard color="primary" person={member} hover={true} />}
+                            return <ExecCard color="primary" person={member} hover={true} />
                         })}
                     </Stack>
                 </Box>
@@ -41,19 +42,19 @@ function Exec() {
                     <Box height={100}></Box>
                     <Stack direction="row" justifyContent="space-evenly" spacing={10} sx={{width: '100%'}} >
                         {ExecMembers.slice(2, 5).map((member) => {
-                            {return <ExecCard color="primary" person={member} hover={true} />}
+                            return <ExecCard color="primary" person={member} hover={true} />
                         })}
                     </Stack>
                     <Box height={80}></Box>
                     <Stack direction="row" justifyContent="space-evenly" spacing={10} sx={{width: '100%'}} >
                         {ExecMembers.slice(5, 8).map((member) => {
-                            {return <ExecCard color="primary" person={member} hover={true} />}
+                            return <ExecCard color="primary" person={member} hover={true} />
                         })}
                     </Stack>
                     <Box height={80}></Box>
                     <Stack direction="row" justifyContent="space-evenly" spacing={10} sx={{width: '100%'}} >
                         {ExecMembers.slice(8, 11).map((member) => {
-                            {return <ExecCard color="primary" person={member} hover={true} />}
+                            return <ExecCard color="primary" person={member} hover={true} />
                         })}
                     </Stack>
                 </Box>
@@ -72,7 +73,9 @@ function Exec() {
                 </Box>
 
             </Stack>
-            
+            <Box height={150} />
+        
+            <Footer />
         </Box>
     );
 }

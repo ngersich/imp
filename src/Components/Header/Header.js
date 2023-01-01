@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { Stack } from "@mui/system";
 import { Typography } from "@mui/material";
 
-const pages = ['About IMP', 'Our Mission', 'Recognition', 'Program Overview', 'How to Join'];
+const pages = ['About IMP', 'Program Overview', 'Our Mission', 'Executive Board',  'How to Join'];
 
 function Header(props) {
 
@@ -27,8 +27,8 @@ function Header(props) {
       case 'Our Mission':
         navigate("/mission");
         break;
-      case 'Recognition':
-        navigate("/recognition");
+      case 'Executive Board':
+        navigate("/exec");
         break;
       case 'Program Overview':
         navigate("/overview");

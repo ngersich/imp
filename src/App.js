@@ -48,7 +48,7 @@ function App() {
         <Route path='/join' element={<HowToJoin/>} />
         <Route path='/mission' element={<Mission/>} />
         <Route path='/overview' element={<Overview/>} />
-        <Route path='/recognition' element={<Recognition/>} />
+        <Route path='/exec' element={<Exec />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/exec' element={<Exec />} />
       </Routes>

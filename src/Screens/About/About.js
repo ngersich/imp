@@ -57,9 +57,9 @@ function About() {
                 </Stack> */}
             </Stack>
 
-            <Box height={10} />
-            <Exec />
-            <Box height={120} />
+            <Box height={100} />
+            {/* <Exec />
+            <Box height={120} /> */}
 
             <Footer />
             
