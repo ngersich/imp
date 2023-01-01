@@ -24,10 +24,10 @@ function ExecCard(props) {
                     <Box sx={{width: '240px', transform: 'translateX(-15px)'}} bgcolor = {props.color === "primary" ? "secondary.main" : "primary.main"}>
                         <Typography color="#fff" fontWeight="bold" textTransform="uppercase" variant="body2" sx={{marginLeft: '15px'}}>{props.person.role}</Typography>
                     </Box>
-                    <Stack sx={{marginRight: '50px'}}>
-                        <Typography variant="body2" color="#fff"><b>Year: </b>{props.person.year}</Typography>
-                        <Typography variant="body2" color="#fff"><b>Major: </b>{props.person.major}</Typography>
-                        <Typography variant="body2" color="#fff"><b>Contact: </b>{props.person.contact}</Typography>
+                    <Stack sx={{marginRight: '50px', height: '100px'}} justifyContent="space-evenly" >
+                        <Typography variant="body2" color="#fff" ><b>Year: </b>{props.person.year}</Typography>
+                        <Typography variant="body2" color="#fff" ><b>Major: </b>{props.person.major}</Typography>
+                        <Typography variant="body2" color="#fff" ><b>Contact: </b>{props.person.contact}</Typography>
                     </Stack>
                 </Stack>
             </Stack>

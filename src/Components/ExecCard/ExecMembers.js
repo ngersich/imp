@@ -31,7 +31,7 @@ const ExecMembers = [
     {
         name: "Julie Mathews",
         year: "Junior",
-        role: "Communications & Outreach Officer",
+        role: "Communications & Outreach",
         major: "Molecular & Cellular Biology",
         contact: "jmathe40@illinois.edu",
         src: JulieImage
