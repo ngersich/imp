@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Carousel from 'react-material-ui-carousel'
 import { Box } from '@mui/material'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -11,6 +11,7 @@ function ImageGroup() {
     const [time, setTime] = useState(100);
     const [duration, setDuration] = useState(0);
     const [start, setStart] = useState(false);
+    // eslint-disable-next-line
     const [index, setIndex] = useState(Math.floor(Math.random() * LandscapeImages.length));
 
     return (

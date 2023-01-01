@@ -9,6 +9,7 @@ import Overview from './Screens/Overview';
 import Recognition from './Screens/Recognition';
 import Styles from './Screens/Styles';
 import Gallery from './Screens/Gallery';
+import Exec from './Screens/Exec';
 
 
 const theme = createTheme({
@@ -49,6 +50,7 @@ function App() {
         <Route path='/overview' element={<Overview/>} />
         <Route path='/recognition' element={<Recognition/>} />
         <Route path='/gallery' element={<Gallery />} />
+        <Route path='/exec' element={<Exec />} />
       </Routes>
     </ThemeProvider>
   );

@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer/Footer";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './About.css';
 import { useNavigate } from "react-router-dom";
+import Exec from "../Exec";
 
 function About() {
 
@@ -55,7 +56,11 @@ function About() {
                     
                 </Stack> */}
             </Stack>
-            <Box height={'100px'} />
+
+            <Box height={10} />
+            <Exec />
+            <Box height={120} />
+
             <Footer />
             
         </Box>
