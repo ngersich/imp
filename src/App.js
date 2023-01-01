@@ -42,7 +42,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
-        <Route path='/styles' element={<Styles />} />
         <Route path='/' element={<About/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/join' element={<HowToJoin/>} />
@@ -50,7 +49,6 @@ function App() {
         <Route path='/overview' element={<Overview/>} />
         <Route path='/exec' element={<Exec />} />
         <Route path='/gallery' element={<Gallery />} />
-        <Route path='/exec' element={<Exec />} />
       </Routes>
     </ThemeProvider>
   );

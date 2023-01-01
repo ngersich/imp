@@ -18,7 +18,7 @@ function ImageGroup() {
         <Carousel
             sx={{width: '90%', maxWidth: '700px'}}
             indicators={false}
-            navButtonsAlwaysVisible={true}
+            navButtonsAlwaysVisible={false}
             interval={time}
 
             next = {() => {
