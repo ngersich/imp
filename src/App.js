@@ -6,8 +6,6 @@ import About from './Screens/About/About';
 import HowToJoin from './Screens/HowToJoin/HowToJoin';
 import Mission from './Screens/Mission';
 import Overview from './Screens/Overview';
-import Recognition from './Screens/Recognition';
-import Styles from './Screens/Styles';
 import Gallery from './Screens/Gallery';
 import Exec from './Screens/Exec';
 

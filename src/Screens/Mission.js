@@ -9,7 +9,7 @@ function Mission() {
     return (
         <Box>
             <Header currentPage="Our Mission" />
-            <Stack spacing={2} marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop='30px' alignItems="center" >
+            <Stack spacing={2} marginRight={{xs: '20px', md: '100px', lg: '200px'}} marginLeft={{xs: '20px', md: '100px', lg: '200px'}} marginTop='30px' alignItems="center" >
                     <Typography variant="h3" textAlign='center'>Our History & Mission</Typography>
                     <Typography variant="body1" >IMP developed out of a youth mentoring program that was the centerpiece of an academic service-learning course taught in the Department of Psychology in the Spring of 2004. Through student leadership and relationship-building in the community, IMP was created as a co-curricular service-learning organization that could provide structure and support to sustain an effective mentoring program. IMP initiated its pilot program at Don Moyer Boys and Girls Club in the Spring of 2005 and operated programs at the Boys and Girls Club and Stratton Elementary School from 2005-2009. Prairie Elementary School (renamed Dr. Williams Elementary School) became IMP’s new partner in the Fall of 2009.</Typography>
 

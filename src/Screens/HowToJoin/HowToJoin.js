@@ -9,7 +9,7 @@ function HowToJoin() {
     return (
         <Box>
             <Header currentPage="How to Join"/>
-            <Stack spacing={2} marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop='30px' >
+            <Stack spacing={2} marginRight={{xs: '20px', md: '100px', lg: '150px'}} marginLeft={{xs: '20px', md: '100px', lg: '150px'}} marginTop='30px' >
                 <Typography variant="h3" textAlign='center'>How to Join IMP</Typography>
                 <Typography variant="h4" textAlign="center" color="primary"><i>Spring 2023</i></Typography>
                 <Stack alignItems="center">

@@ -11,7 +11,7 @@ function Overview() {
     return (
         <Box>
             <Header currentPage="Program Overview"/>
-            <Stack spacing={2} marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop='30px' >
+            <Stack spacing={2} marginRight={{xs: '20px', md: '100px', lg: '150px'}} marginLeft={{xs: '20px', md: '100px', lg: '150px'}} marginTop='30px' >
                     <Typography variant="h3" textAlign='center'>Program Overview</Typography>
                     <Typography variant="body1" sx={{fontSize: '1.2rem'}}><u>Site-based One-on-One Youth Mentoring</u></Typography>
                     <Typography variant="body1">Mentors and mentees commit to a full academic year of consistent participation in the program. Mentoring occurs once per week for two hours with a focus on building positive relationships between the children and young adults and learning from those experiences. The sessions emphasize academic support, reading, and enrichment activities to help children build developmental assets that will help them to be healthy, successful, and responsible citizens. Activities include topics such as the arts, culture and diversity, self-esteem, health and nutrition, organizational and communication skills, and service to the community. </Typography>

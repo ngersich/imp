@@ -10,8 +10,7 @@ import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import ImpLogo from './IMPLogo.png';
 import { useNavigate } from "react-router-dom";
-import { Stack } from "@mui/system";
-import { Typography } from "@mui/material";
+import { Typography, Link, Stack } from "@mui/material";
 
 const pages = ['About IMP', 'Program Overview', 'Our Mission', 'Executive Board',  'How to Join'];
 
@@ -43,6 +42,25 @@ function Header(props) {
         break;
     }
   };
+
+  const getRoute = (page) => {
+    switch(page) {
+      case 'About IMP': 
+        return "/about";
+      case 'Our Mission':
+        return "/mission";
+      case 'Executive Board':
+        return "/exec";
+      case 'Program Overview':
+        return "/overview";
+      case 'How to Join':
+       return "/join";
+      case "":
+       return "/";
+      default:
+        return "/";
+    }
+  }
 
   const [backdrop, setBackdrop] = useState(false);
 
@@ -103,6 +121,8 @@ function Header(props) {
             {pages.map((page) => (
               <Button
                 key={page}
+                component={Link}
+                href={getRoute(page)}
                 onClick={(() => {
                   handleNavigation(page);
                 })}
@@ -125,14 +145,20 @@ function Header(props) {
       bgcolor='primary.main'
       onClick={handleBackdropClose}
     >
-      <Stack sx={{width: '1'}}>
+      <Stack sx={{width: '100%'}} alignItems="center">
         {pages.map((page) => (
               <Button
                 key={page}
+                href={getRoute(page)}
                 onClick={(() => {
                   handleNavigation(page);
                 })}
-                sx={{my: 2, color: 'white', display: 'block', fontSize: '1.4rem'}}
+                sx={
+                  props.currentPage === page ? 
+                  {my: 2, color: 'secondary.main', display: 'block', fontSize: '1.4rem'}
+                  :
+                  {my: 2, color: 'white', display: 'block', fontSize: '1.4rem'}
+                }
               >
                 {page}
               </Button>

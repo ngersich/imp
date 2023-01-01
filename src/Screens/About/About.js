@@ -6,7 +6,6 @@ import Footer from "../../Components/Footer/Footer";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './About.css';
 import { useNavigate } from "react-router-dom";
-import Exec from "../Exec";
 
 function About() {
 
