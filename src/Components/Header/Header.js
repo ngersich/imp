@@ -43,24 +43,24 @@ function Header(props) {
     }
   };
 
-  // const getRoute = (page) => {
-  //   switch(page) {
-  //     case 'About IMP': 
-  //       return "/about";
-  //     case 'Our Mission':
-  //       return "/mission";
-  //     case 'Executive Board':
-  //       return "/exec";
-  //     case 'Program Overview':
-  //       return "/overview";
-  //     case 'How to Join':
-  //      return "/join";
-  //     case "":
-  //      return "/";
-  //     default:
-  //       return "/";
-  //   }
-  // }
+  const getRoute = (page) => {
+    switch(page) {
+      case 'About IMP': 
+        return "/about";
+      case 'Our Mission':
+        return "/mission";
+      case 'Executive Board':
+        return "/exec";
+      case 'Program Overview':
+        return "/overview";
+      case 'How to Join':
+       return "/join";
+      case "":
+       return "/";
+      default:
+        return "/";
+    }
+  }
 
   const [backdrop, setBackdrop] = useState(false);
 
@@ -122,7 +122,7 @@ function Header(props) {
               <Button
                 key={page}
                 component={Link}
-                // href={getRoute(page)}
+                href={getRoute(page)}
                 onClick={(() => {
                   handleNavigation(page);
                 })}
@@ -149,7 +149,7 @@ function Header(props) {
         {pages.map((page) => (
               <Button
                 key={page}
-                // href={getRoute(page)}
+                href={getRoute(page)}
                 onClick={(() => {
                   handleNavigation(page);
                 })}
