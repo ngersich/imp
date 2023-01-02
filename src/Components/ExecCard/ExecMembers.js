@@ -1,7 +1,6 @@
-import AbbyImage from '../ImageGroup/Images/Exec/abby.jpeg';
 import AhmadImage from '../ImageGroup/Images/Exec/ahmad.jpeg';
 import AddisonImage from '../ImageGroup/Images/Exec/addison.jpeg';
-// import AllegraImage from '../ImageGroup/Images/Exec/allegra.jpeg';
+import DanetteImage from '../ImageGroup/Images/Exec/danette.jpeg';
 import EmmaImage from '../ImageGroup/Images/Exec/emma.jpeg';
 import GraceImage from '../ImageGroup/Images/Exec/grace.jpeg';
 import JulieImage from '../ImageGroup/Images/Exec/julie.JPG';
@@ -21,12 +20,12 @@ const ExecMembers = [
         src: GraceImage
     },
     {
-        name: "Abby Lynch",
+        name: "Danette Denham",
         role: "Member Development Officer",
         year: "Sophomore",
-        major: "Elementary Education",
-        contact: "alync2@illinois.edu",
-        src: AbbyImage
+        major: "Molecular & Cellular Biology",
+        contact: "ddenham2@illinois.edu",
+        src: DanetteImage
     },
     {
         name: "Julie Mathews",
@@ -84,14 +83,6 @@ const ExecMembers = [
         contact: "aprall2@illinois.edu",
         src: AddisonImage
     },
-    // {
-    //     name: "Allegra Hinojosa-Cabrera",
-    //     year: "Junior",
-    //     role: "Wednesday Site Supervisor",
-    //     major: "Human Development",
-    //     contact: "allegra5@illinois.edu",
-    //     src: AllegraImage
-    // },
     {
         name: "Lauren Lane",
         year: "Sophomore",
