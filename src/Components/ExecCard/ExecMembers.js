@@ -80,7 +80,7 @@ const ExecMembers = [
         name: "Addison Prall",
         year: "Freshman",
         role: "Wednesday Site Supervisor",
-        major: "Middle School Education",
+        major: "Middle School Education (History)",
         contact: "aprall2@illinois.edu",
         src: AddisonImage
     },
