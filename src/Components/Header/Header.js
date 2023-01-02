@@ -122,7 +122,7 @@ function Header(props) {
               <Button
                 key={page}
                 component={Link}
-                href={getRoute(page)}
+                // href={getRoute(page)}
                 onClick={(() => {
                   handleNavigation(page);
                 })}
@@ -149,7 +149,7 @@ function Header(props) {
         {pages.map((page) => (
               <Button
                 key={page}
-                href={getRoute(page)}
+                // href={getRoute(page)}
                 onClick={(() => {
                   handleNavigation(page);
                 })}
