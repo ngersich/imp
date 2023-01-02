@@ -43,24 +43,24 @@ function Header(props) {
     }
   };
 
-  const getRoute = (page) => {
-    switch(page) {
-      case 'About IMP': 
-        return "/about";
-      case 'Our Mission':
-        return "/mission";
-      case 'Executive Board':
-        return "/exec";
-      case 'Program Overview':
-        return "/overview";
-      case 'How to Join':
-       return "/join";
-      case "":
-       return "/";
-      default:
-        return "/";
-    }
-  }
+  // const getRoute = (page) => {
+  //   switch(page) {
+  //     case 'About IMP': 
+  //       return "/about";
+  //     case 'Our Mission':
+  //       return "/mission";
+  //     case 'Executive Board':
+  //       return "/exec";
+  //     case 'Program Overview':
+  //       return "/overview";
+  //     case 'How to Join':
+  //      return "/join";
+  //     case "":
+  //      return "/";
+  //     default:
+  //       return "/";
+  //   }
+  // }
 
   const [backdrop, setBackdrop] = useState(false);
 

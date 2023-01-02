@@ -64,16 +64,27 @@ function Footer(props) {
       return;
     }
 
-    axios.post('https://sheet.best/api/sheets/b89e1a2d-0124-4f12-b1ee-3ff8cb956a7e', {"email": email})
+    const date = new Date();
+    const dateString = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+
+    axios.post('https://sheet.best/api/sheets/10b48f9b-a5c4-4da5-8dbc-02f6e81b83f9', {"email": email, "date": dateString})
     .then(response => {
       setAlertOpen(true);
       setAlertType("success");
       setAlertText("Email was successfully added to our mailing list.");
       setEmail("");
     }).catch( e => {
-      setAlertOpen(true);
-      setAlertType("error");
-      setAlertText("There was an error processing your email. If the issue persists, please contact impuofi@gmail.com or check back later when applications open.")
+      axios.post('https://sheet.best/api/sheets/61be34ca-fbe9-4a08-b887-608d3f60ec22', {"email": email, "date": dateString})
+      .then(response => {
+        setAlertOpen(true);
+        setAlertType("success");
+        setAlertText("Email was successfully added to our mailing list.");
+        setEmail("");
+      }).catch(e => {
+        setAlertOpen(true);
+        setAlertType("error");
+        setAlertText("There was an error processing your email. If the issue persists, please contact impuofi@gmail.com or check back later when applications open.")
+      })
     })
   };
 
