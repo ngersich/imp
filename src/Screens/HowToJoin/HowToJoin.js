@@ -19,7 +19,7 @@ function HowToJoin() {
                             <ul>
                                 <li><Typography variant="body1" color="text.secondary">No info sessions currently available.</Typography></li>
                             </ul>
-                            <li className="orderedListEl"><Typography className="listHeading" variant="h5">Decide whether you can commit to mentoring on Tuesdays, Wednesdays, OR Saturdays for the whole semester!​ (See <Link href='/overview' underline='always'>Program Overview</Link> page for more info.)</Typography></li>
+                            <li className="orderedListEl"><Typography className="listHeading" variant="h5">Decide whether you can commit to mentoring on Tuesdays, Wednesdays, OR Saturdays for the whole semester!​ (See <Link href="/overview" underline='always'>Program Overview</Link> page for more info.)</Typography></li>
                             <ul>
                                 <li><Typography variant="body1" color="text.secondary">Membership requirements also include:</Typography> </li>
                                 <ul>

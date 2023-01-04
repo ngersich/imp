@@ -8,6 +8,7 @@ import Mission from './Screens/Mission';
 import Overview from './Screens/Overview';
 import Gallery from './Screens/Gallery';
 import Exec from './Screens/Exec';
+import NotFound from './Screens/NotFound';
 
 
 const theme = createTheme({
@@ -47,6 +48,7 @@ function App() {
         <Route path='/overview' element={<Overview/>} />
         <Route path='/exec' element={<Exec />} />
         <Route path='/gallery' element={<Gallery />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </ThemeProvider>
   );
