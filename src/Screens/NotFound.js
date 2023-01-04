@@ -4,6 +4,7 @@ import { Box, Stack, Typography, Button } from '@mui/material';
 import NotFoundImage from '../Components/ImageGroup/Images/NotFound/Copy of IMG_1639.JPG';
 import Footer from "../Components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
+import { borderRadius } from "@mui/system";
 
 function NotFound() {
 
@@ -22,7 +23,7 @@ function NotFound() {
                 <Box/>
                 <Button color="secondary" variant="contained" sx={{fontSize: '1.2rem'}} onClick={handleClick}>Return Home</Button>
                 <Box />
-                <Box component="img" alt="notfound" src={NotFoundImage} width={{xs: '80%', md: '50%'}} />
+                <Box component="img" alt="notfound" src={NotFoundImage} width={{xs: '80%', md: '50%'}} sx={{borderRadius: '20px'}} />
                 <Box height={50}/>
             </Stack>
             <Footer />
