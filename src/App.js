@@ -20,6 +20,9 @@ const theme = createTheme({
       main: '#dc5034',
       contrastText: "#fff"
     },
+    googleForm: {
+      main: '#710ebe'
+    }
   },
   typography: {
     body1: {
