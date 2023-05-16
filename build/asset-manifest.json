@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.08d2fbe0.css",
-    "main.js": "/static/js/main.cbc65a0e.js",
+    "main.css": "/static/css/main.0a40fab1.css",
+    "main.js": "/static/js/main.fab04eef.js",
     "static/js/787.55e35595.chunk.js": "/static/js/787.55e35595.chunk.js",
-    "static/media/Copy of IMG_1639.JPG": "/static/media/Copy of IMG_1639.4a00bb96a4023bdd1c8f.JPG",
     "static/media/IMG_0489.jpg": "/static/media/IMG_0489.75be637f5e6bbdc0bfa0.jpg",
     "static/media/IMG_6260_Original (2).JPG": "/static/media/IMG_6260_Original (2).4c3f6fc42c5196c83553.JPG",
     "static/media/IMG_3989.jpeg": "/static/media/IMG_3989.92f2367907b226809bcd.jpeg",
@@ -41,6 +40,7 @@
     "static/media/Copy of IMG_3850 (1).jpg": "/static/media/Copy of IMG_3850 (1).6f4c979c64e505c8b941.jpg",
     "static/media/IMG_0434.jpeg": "/static/media/IMG_0434.a1c259e47b5c9f0fffee.jpeg",
     "static/media/IMG_0329.jpg": "/static/media/IMG_0329.a67f13bbd06c18151a96.jpg",
+    "static/media/Copy of IMG_1639.JPG": "/static/media/Copy of IMG_1639.480c25b25220754399b0.JPG",
     "static/media/Copy of IMG_3539.JPG": "/static/media/Copy of IMG_3539.986ee937a3ee3bc867ed.JPG",
     "static/media/noah.jpeg": "/static/media/noah.fae1b801f9629a45cae6.jpeg",
     "static/media/ahmad.jpeg": "/static/media/ahmad.5cf136965a2509031646.jpeg",
@@ -55,12 +55,12 @@
     "static/media/emma.jpeg": "/static/media/emma.1b23fcc08bde83f3f5e0.jpeg",
     "static/media/addison.jpeg": "/static/media/addison.eaec045daa652773a44c.jpeg",
     "index.html": "/index.html",
-    "main.08d2fbe0.css.map": "/static/css/main.08d2fbe0.css.map",
-    "main.cbc65a0e.js.map": "/static/js/main.cbc65a0e.js.map",
+    "main.0a40fab1.css.map": "/static/css/main.0a40fab1.css.map",
+    "main.fab04eef.js.map": "/static/js/main.fab04eef.js.map",
     "787.55e35595.chunk.js.map": "/static/js/787.55e35595.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08d2fbe0.css",
-    "static/js/main.cbc65a0e.js"
+    "static/css/main.0a40fab1.css",
+    "static/js/main.fab04eef.js"
   ]
 }
