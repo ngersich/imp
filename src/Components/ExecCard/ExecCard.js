@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack, Link } from "@mui/material";
 
 function ExecCard(props) {
     const [display, setDisplay] = useState(false);
@@ -27,7 +27,9 @@ function ExecCard(props) {
                     <Stack sx={{marginRight: '50px', height: '100px'}} justifyContent="space-evenly" >
                         <Typography variant="body2" color="#fff" ><b>Year: </b>{props.person.year}</Typography>
                         <Typography variant="body2" color="#fff" ><b>Major: </b>{props.person.major}</Typography>
-                        <Typography variant="body2" color="#fff" ><b>Contact: </b>{props.person.contact}</Typography>
+                        <Typography variant="body2" color="#fff" ><b>Contact: </b>
+                        <Link underline="hover" href={'mailto:' + props.person.contact} color="#fff">{props.person.contact}</Link>
+                        </Typography>
                     </Stack>
                 </Stack>
             </Stack>

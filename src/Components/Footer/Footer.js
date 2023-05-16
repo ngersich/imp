@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppBar, Box, Toolbar, Container, Button, TextField, Stack, Typography, Alert, Collapse, IconButton } from '@mui/material';
+import { AppBar, Box, Toolbar, Container, Button, TextField, Stack, Typography, Alert, Collapse, IconButton, Link } from '@mui/material';
 import ImpLogo from './IMPLogo.png';
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from "react-router-dom";
@@ -128,7 +128,7 @@ function Footer(props) {
             <Stack direction="row" spacing={8} marginTop="5px">
                 <Stack>
                     <Typography variant="h6">Email</Typography>
-                    <Typography variant="body2">impuofi@gmail.com</Typography>
+                    <Link href='mailto:impuofi@gmail.com' variant="body2" underline="hover" color='#fff'>impuofi@gmail.com</Link>
                 </Stack>
                 <Stack>
                     <Typography variant="h6">Instagram</Typography>
@@ -168,7 +168,7 @@ function Footer(props) {
             <Stack direction="row" spacing={8} marginTop="5px">
                 <Stack>
                     <Typography variant="h6">Email</Typography>
-                    <Typography variant="body2">impuofi@gmail.com</Typography>
+                    <Link href='mailto:impuofi@gmail.com' variant="body2" underline="none" color='#fff'>impuofi@gmail.com</Link>
                 </Stack>
                 <Stack>
                     <Typography variant="h6">Instagram</Typography>
