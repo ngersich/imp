@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
 import { Typography, Box, Stack, Button } from "@mui/material";
-import ImageGroup from "../../Components/ImageGroup/ImageGroup";
 import Footer from "../../Components/Footer/Footer";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './About.css';
 import { useNavigate } from "react-router-dom";
+import ImageGroup from "../../Components/ImageGroup/ImageGroup";
 
 function About() {
 
@@ -34,7 +34,7 @@ function About() {
                     <Stack alignItems="center" display={{xs: 'flex', md: 'flex', lg: 'none'}}>
                         <Typography variant="body1" >The Illini Mentor Program is a registered student organization at the University of Illinois. The program is a student-directed initiative to work closely with children in the Champaign-Urbana community by creating one-on-one mentoring relationships. IMP focuses on the academic, personal, and social development of our mentees while striving to integrate university life with the community. College students from Illinois meet with their "mentee" once a week at either Dr. William Elementary School, Thomas Paine Elementary School, or the Don Moyer Boys and Girls Club throughout the school year. It is not uncommon for mentor-mentee pairs to work together for multiple years! The bonds and relationships created in the Illini Mentor Program between our amazing mentors and mentees is truly very special!</Typography>
                         <Button onClick={handleJoinNavigation} color="secondary" variant="contained" sx={{height: '70px', width: '300px', borderRadius: '10px', marginTop: '30px', fontSize: '1.2rem' }} >
-                                Join us Spring 2023!
+                                Learn how to join!
                                 <ArrowForwardIosIcon sx={{width: '0.9rem', marginLeft: '10px' }} />
                             </Button>
                         <Box sx={{height: '40px'}}></Box>

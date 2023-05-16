@@ -1,46 +1,52 @@
-import React, {useState} from "react";
-import Carousel from 'react-material-ui-carousel'
-import { Box } from '@mui/material'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+
+
+import { Box } from "@mui/material";
 import LandscapeImages from "./Images/LandscapeImages";
+
+// import required modules
+import { Autoplay, Navigation } from "swiper";
 
 
 function ImageGroup() {
+  return (
+    <Box sx={{width: '90%', maxWidth: '600px'}}>
+        <ImageCarousel />
+    </Box>
+    
+);
 
-    const [time, setTime] = useState(100);
-    const [duration, setDuration] = useState(0);
-    const [start, setStart] = useState(false);
-    // eslint-disable-next-line
-    const [index, setIndex] = useState(Math.floor(Math.random() * LandscapeImages.length));
-
-    return (
-        <Carousel
-            sx={{width: '90%', maxWidth: '700px'}}
-            indicators={false}
-            navButtonsAlwaysVisible={false}
-            interval={time}
-
-            next = {() => {
-                if (!start) {
-                    setTime(4000);
-                    setDuration(500);
-                    setStart(true);
-                }
-            }}
-            index={index}
-            duration={duration}
-
-            NextIcon={<ArrowForwardIosIcon/> }          
-            PrevIcon={<ArrowBackIosNewIcon/>}            
-        >
-            {
-                LandscapeImages.map( (image) => <Im key={image} src={image}/>)
-                //items.map( (item, i) => <Item key={i} item={item} /> )
-            }
-        </Carousel>
-    );
 }
+function ImageCarousel() {
+  return (
+    <>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[Autoplay, Navigation, EffectFade]}
+        loop={true}
+        className="mySwiper"
+        effect="fade"
+      >
+        {
+            LandscapeImages.map( (image) => <SwiperSlide><Im key={image} src={image} /></SwiperSlide>)
+        }
+      </Swiper>
+    </>
+  );
+}
+
+
 
 function Im(props) {
     return (
@@ -49,10 +55,9 @@ function Im(props) {
             alt="IMP image"
             src={props.src}
             //maxWidth={{xs: 'none', md: '700px'}}
-            width="100%"
+            width='100%'
             borderRadius={10}
         >
-
         </Box>
     )
 }
