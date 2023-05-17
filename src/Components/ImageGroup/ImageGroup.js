@@ -13,16 +13,49 @@ import LandscapeImages from "./Images/LandscapeImages";
 import { Autoplay, Navigation } from "swiper";
 
 
-function ImageGroup() {
+function ImageGroup(props) {
+  if (props.fullScreen) {
+    return (
+      <Box >
+        <ImageCarousel fullScreen={true}/>
+    </Box>
+    );
+  }
+
   return (
     <Box sx={{width: '90%', maxWidth: '600px'}}>
         <ImageCarousel />
     </Box>
-    
-);
+  );
+
 
 }
-function ImageCarousel() {
+function ImageCarousel(props) {
+  if (props.fullScreen) {
+    return (
+      <>
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1.75}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          modules={[Autoplay, Navigation, EffectFade]}
+          loop={true}
+          className="mySwiper"
+          // effect="fade"
+        >
+          {
+              LandscapeImages.map( (image) => <SwiperSlide><Im key={image} src={image} borderRadius={false} /></SwiperSlide>)
+          }
+        </Swiper>
+      </>
+    );
+  }
+
   return (
     <>
       <Swiper
@@ -39,7 +72,7 @@ function ImageCarousel() {
         effect="fade"
       >
         {
-            LandscapeImages.map( (image) => <SwiperSlide><Im key={image} src={image} /></SwiperSlide>)
+            LandscapeImages.map( (image) => <SwiperSlide><Im key={image} src={image} borderRadius={true} /></SwiperSlide>)
         }
       </Swiper>
     </>
@@ -56,7 +89,7 @@ function Im(props) {
             src={props.src}
             //maxWidth={{xs: 'none', md: '700px'}}
             width='100%'
-            borderRadius={10}
+            borderRadius={props.borderRadius ? 10 : 0}
         >
         </Box>
     )
