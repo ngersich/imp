@@ -8,7 +8,8 @@ import InstagramButton from '../Components/InstagramButton';
 
 
 function Initial() {
-    const initialText = 'The Illini Mentor Program is a student-directed initiative at the University of Illinois that works closely with children in the Champaign-Urbana community. IMP focuses on the academic, personal, and social development of our students while striving to integrate university life with the community.';
+    const initialText = 'The Illini Mentor Program is a student-directed initiative at the University of Illinois that works closely with children in the Champaign-Urbana community. IMP focuses on the'
+    const followingText = 'of our students while striving to integrate university life with the community.';
 
     let navigate = useNavigate();
 
@@ -23,7 +24,13 @@ function Initial() {
             <Stack direction="row" spacing={7}>
                 <Stack width='50%' spacing={5}>
                     <Typography variant='h1' color='primary.main'>About IMP</Typography>
-                    <Typography variant="body1" fontSize='1.3rem'>{initialText}</Typography>
+                    <Typography variant="body1" fontSize='1.3rem'>
+                        {initialText}
+                        <Box component="span" color="secondary.main" fontWeight='bold'> academic</Box>, 
+                        <Box component="span" color="secondary.main" fontWeight='bold'> personal</Box>, and 
+                        <Box component="span" color="secondary.main" fontWeight='bold'> social development </Box>
+                        {followingText}
+                    </Typography>
                     <Stack direction="row" alignItems='center' spacing={5}>
                         <JoinButton handleJoinNavigation={handleJoinNavigation} />
                         <InstagramButton />

@@ -17,7 +17,6 @@ function About2() {
 
     return (
         <Box>
-            
             <Header currentPage="About IMP"/>
             <Initial />
             <OneOnOne />
@@ -26,7 +25,6 @@ function About2() {
             <History />
             <Recognition />
             <Footer />
-
         </Box>
     );
 }

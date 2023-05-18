@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 
 function Mission() {
-    const firstText = 'The Illini Mentor Program is an award-winning registered student organization at the University of Illinois dedicated to fostering meaningful and consistent mentoring relationships between University students and children in the local community with the goal of supporting learning, growth, skill-building, and interracial and cultural understanding. As a co-curricular service-learning organization, IMP provides opportunities for Illinois students to learn more about the community and build leadership skills as they take an active role in promoting positive youth development.'; 
-    const secondText = "IMP’s mission includes engaging students in the process of building bridges between the University of Illinois and the surrounding community, which can lead to productive and mutually beneficial dialogue, capacity-building, and a commitment to civic responsibility.";
+    const firstText = "The Illini Mentor Program is an award-winning registered student organization at the University of Illinois dedicated to fostering meaningful and consistent mentoring relationships between University students and children in the local community with the goal of supporting learning, growth, skill-building, and interracial and cultural understanding. As a co-curricular service-learning organization, IMP provides opportunities for Illinois students to learn more about the community and build leadership skills as they take an active role in promoting positive youth development."; 
+    const missionStatement = " IMP’s mission includes engaging students in the process of building bridges between the University of Illinois and the surrounding community, which can lead to productive and mutually beneficial dialogue, capacity-building, and a commitment to civic responsibility.";
 
     return (
         <Box bgcolor='backgroundGrey.light'>
@@ -24,8 +24,10 @@ function Mission() {
                             <Stack spacing={5}>
                                 <Typography variant="h3">Our Mission</Typography>
                                 <Stack spacing={4}>
-                                    <Typography variant="body1">{firstText}</Typography>
-                                    <Typography variant="body1" sx={{fontStyle: 'italic'}}>{secondText}</Typography>
+                                    <Typography variant="body1">
+                                        {firstText}
+                                    </Typography>
+                                    <Typography variant="body1" sx={{fontStyle: 'italic'}}>{missionStatement}</Typography>
                                 </Stack>
                             </Stack>
                         </motion.div>
