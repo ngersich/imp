@@ -2,7 +2,7 @@ import React from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import ImageOffset from "../../../Components/ImageGroup/ImageOffset";
 import HistoryImage from '../../../../src/Components/ImageGroup/Images/About2/IMG_1079.jpg';
-import Variants from "../Components/Variants";
+import Variants from "../../../Components/Animations/Variants";
 import { motion } from "framer-motion";
 
 
@@ -13,8 +13,8 @@ function History() {
     const thirdText = "Today, IMP facilitates an active site-based mentoring program during the fall/spring semesters in collaboration with Don Moyer Boys and Girls Club, Dr. Williams Elementary School, and Thomas Paine Elementary School. The program at the Boys & Girls Club operates on Saturdays mornings and is open to children ages 8-10. The after-school programs at Dr. Williams and Thomas Paine Elementary School run on Tuesdays and Wednesdays and are open to children in 3rd-5th grade."
 
     return (
-        <Stack  marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop={10} marginBottom={10} spacing={12} >
-            <Stack direction="row" spacing={10}>
+        <Stack  marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop={{xs: 0, md: 10}} marginBottom={{xs: 5, md: 10}} spacing={12} >
+            <Stack direction="row" spacing={10} display={{xs: 'none', md: 'flex'}}>
                 <Box width='50%'>
                     <motion.div
                         initial="offscreen"
@@ -26,6 +26,38 @@ function History() {
                     </motion.div>
                 </Box>
                 <Box width='40%'>
+                    <motion.div
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{once: true}}
+                        variants={Variants.fadeIn}
+                    >
+                        <Stack spacing={5}>
+                            <Typography variant="h3" color="secondary.main">Our History</Typography>
+                            <Stack spacing={3}>
+                                <Typography variant="body1">{firstAndSecondText}</Typography>
+                                <Typography variant="body1">{thirdText}</Typography>
+                            </Stack>
+                        </Stack>
+                    </motion.div>
+                </Box>
+            </Stack>
+
+
+
+
+            <Stack spacing={5} display={{xs: 'flex', md: 'none'}} alignItems='center'>
+                <Stack width='80%' alignItems='center'>
+                    <motion.div
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{once: true}}
+                        variants={Variants.fadeIn}
+                    >
+                        <Box><ImageOffset src={HistoryImage} color="secondary.faint" direction="right" /></Box>
+                    </motion.div>
+                </Stack>
+                <Box>
                     <motion.div
                         initial="offscreen"
                         whileInView="onscreen"

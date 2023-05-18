@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 function JoinButton(props) {

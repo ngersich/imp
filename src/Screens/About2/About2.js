@@ -1,13 +1,10 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
-import { Typography, Box, Stack, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Box } from "@mui/material";
 import Initial from "./Sections/Initial";
 import OneOnOne from "./Sections/OneOnOne";
-import ImageGroup from "../../Components/ImageGroup/ImageGroup";
 import Mission from './Sections/Mission';
 import History from './Sections/History';
-import GalleryButton from "./Components/GalleryButton";
 import Recognition from "./Sections/Recognition";
 import Footer from "../../Components/Footer/Footer";
 import ImageSection from './Sections/ImageSection';

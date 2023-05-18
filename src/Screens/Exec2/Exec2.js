@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import {Box, Stack, Typography} from '@mui/material';
-import ExecCard from "../Components/ExecCard/ExecCard";
-import ExecMembers from "../Components/ExecCard/ExecMembers";
-import Header from "../Components/Header/Header";
-import Footer from "../Components/Footer/Footer";
+import ExecCard from "../../Components/ExecCard/ExecCard";
+import ExecMembers from "../../Components/ExecCard/ExecMembers";
+import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
 
-function Exec() {
+function Exec2() {
     useEffect(() => {
         console.log(ExecMembers.slice(2, 7));
     }, []);
@@ -13,7 +13,7 @@ function Exec() {
         <Box>
             <Header currentPage='Executive Board' />
             <Stack spacing={2} marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop='30px' alignItems="center" >
-                <Typography variant="h3" textAlign='center' >Executive Board</Typography>
+                <Typography variant="h1" textAlign='center' color="primary.main" >Executive Board</Typography>
                 <Typography variant="body1" fontSize="1.3rem" textAlign="center" display={{xs: 'none', md: 'inline'}}>Hover over each picture for more information!</Typography>
                 <Box sx={{width: '100%'}} display={{xs: 'none', md: 'none', lg: 'inline'}}>
                     <Stack alignItems="center">
@@ -80,4 +80,4 @@ function Exec() {
     );
 }
 
-export default Exec;
+export default Exec2;

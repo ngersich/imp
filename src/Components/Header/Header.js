@@ -12,7 +12,8 @@ import ImpLogo from './IMPLogo.png';
 import { useNavigate } from "react-router-dom";
 import { Typography, Link, Stack } from "@mui/material";
 
-const pages = ['About IMP', 'Program Overview', 'Our Mission', 'Executive Board',  'How to Join'];
+// const pages = ['About IMP', 'Program Overview', 'Our Mission', 'Executive Board',  'How to Join'];
+const pages = ['About IMP', 'Program Overview', 'Executive Board', 'How to Join'];
 
 function Header(props) {
 
@@ -23,9 +24,9 @@ function Header(props) {
       case 'About IMP': 
         navigate("/about");
         break;
-      case 'Our Mission':
-        navigate("/mission");
-        break;
+      // case 'Our Mission':
+      //   navigate("/mission2");
+      //   break;
       case 'Executive Board':
         navigate("/exec");
         break;

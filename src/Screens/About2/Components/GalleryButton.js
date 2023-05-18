@@ -13,7 +13,7 @@ function GalleryButton() {
 
     return (
         <Stack alignItems='center'>
-            <Button variant="contained" color="secondary" sx={{marginTop: '20px', borderRadius: '30px'}} onClick={handleGalleryNavigation} >
+            <Button variant="contained" color="secondary" sx={{marginTop: '20px', borderRadius: '30px', fontSize: '1.2rem'}} onClick={handleGalleryNavigation} >
                 See more
                 <ArrowForwardIosIcon sx={{width: '0.9rem', marginLeft: '10px' }} />
             </Button>

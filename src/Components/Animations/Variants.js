@@ -1,5 +1,3 @@
-import React from "react";
-
 const Variants = {
     moveRight: {
         offscreen: {
@@ -18,6 +16,34 @@ const Variants = {
     moveLeft: {
         offscreen: {
             x: 500
+        },
+        onscreen: {
+            x: 0,
+            transition: {
+                type: "spring",
+                bounce: 0.2,
+                duration: 2.0
+            }
+        }
+    },
+
+    moveRightMobile: {
+        offscreen: {
+        x: -300
+        },
+        onscreen: {
+        x: 0,
+        transition: {
+            type: "spring",
+            bounce: 0.2,
+            duration: 2.0
+        }
+        }
+    },
+
+    moveLeftMobile: {
+        offscreen: {
+            x: 300
         },
         onscreen: {
             x: 0,
