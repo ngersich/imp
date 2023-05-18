@@ -10,18 +10,10 @@ import History from './Sections/History';
 import GalleryButton from "./Components/GalleryButton";
 import Recognition from "./Sections/Recognition";
 import Footer from "../../Components/Footer/Footer";
-
-
+import ImageSection from './Sections/ImageSection';
 
 function About2() {
 
-    
-
-    let navigate = useNavigate();
-
-    const handleGalleryNavigation = () => {
-        navigate("/gallery");
-    };
 
     return (
         <Box>
@@ -29,10 +21,7 @@ function About2() {
             <Header currentPage="About IMP"/>
             <Initial />
             <OneOnOne />
-            <Box height={50} />
-            <ImageGroup fullScreen={true} />
-            <GalleryButton />
-            <Box height={50} />
+            <ImageSection />
             <Mission />
             <History />
             <Recognition />

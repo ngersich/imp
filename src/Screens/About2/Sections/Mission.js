@@ -2,7 +2,8 @@ import React from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import ImageOffset from "../../../Components/ImageGroup/ImageOffset";
 import MissionImage1 from '../../../../src/Components/ImageGroup/Images/About2/IMG_5428.jpg';
-
+import Variants from "../Components/Variants";
+import { motion } from "framer-motion";
 
 
 function Mission() {
@@ -11,17 +12,35 @@ function Mission() {
 
     return (
         <Box bgcolor='backgroundGrey.light'>
-            <Stack marginRight={{xs: '20px', md: '70px'}} marginLeft={{xs: '20px', md: '70px'}} paddingTop={10} paddingBottom={10} spacing={10} bgcolor='backgroundGrey.light' >
+            <Stack marginRight={{xs: '20px', md: '70px'}} marginLeft={{xs: '20px', md: '70px'}} paddingTop={15} paddingBottom={15} spacing={10} bgcolor='backgroundGrey.light' >
                 <Stack direction="row" spacing={10} >
-                    <Stack width='40%' spacing={5}>
-                        <Typography variant="h3">Our Mission</Typography>
-                        <Stack spacing={4}>
-                            <Typography variant="body1">{firstText}</Typography>
-                            <Typography variant="body1" sx={{fontStyle: 'italic'}}>{secondText}</Typography>
-                        </Stack>
-                    </Stack>
+                    <Box width='40%'>
+                        <motion.div
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            viewport={{once: true}}
+                            variants={Variants.fadeIn}
+                        >
+                            <Stack spacing={5}>
+                                <Typography variant="h3">Our Mission</Typography>
+                                <Stack spacing={4}>
+                                    <Typography variant="body1">{firstText}</Typography>
+                                    <Typography variant="body1" sx={{fontStyle: 'italic'}}>{secondText}</Typography>
+                                </Stack>
+                            </Stack>
+                        </motion.div>
+                    </Box>
                     <Box width='60%'>
-                        <ImageOffset src={MissionImage1} color="primary.faint" direction="left" />
+                        <motion.div
+                                initial="offscreen"
+                                whileInView="onscreen"
+                                viewport={{once: true}}
+                                variants={Variants.moveLeft}
+                        >
+                            <Box>
+                                <ImageOffset src={MissionImage1} color="primary.faint" direction="left" />
+                            </Box>
+                        </motion.div>
                     </Box>
                 </Stack>
             </Stack>

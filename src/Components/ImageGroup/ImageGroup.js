@@ -39,7 +39,7 @@ function ImageCarousel(props) {
           slidesPerView={1.75}
           centeredSlides={true}
           autoplay={{
-            delay: 2500,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           navigation={true}
@@ -62,7 +62,7 @@ function ImageCarousel(props) {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         navigation={true}

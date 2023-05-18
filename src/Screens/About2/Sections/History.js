@@ -2,6 +2,8 @@ import React from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import ImageOffset from "../../../Components/ImageGroup/ImageOffset";
 import HistoryImage from '../../../../src/Components/ImageGroup/Images/About2/IMG_1079.jpg';
+import Variants from "../Components/Variants";
+import { motion } from "framer-motion";
 
 
 function History() {
@@ -13,16 +15,32 @@ function History() {
     return (
         <Stack  marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop={10} marginBottom={10} spacing={12} >
             <Stack direction="row" spacing={10}>
-                <Stack width='50%'>
-                    <Box><ImageOffset src={HistoryImage} color="secondary.faint" direction="right" /></Box>
-                </Stack>
-                <Stack width='40%' spacing={5}>
-                    <Typography variant="h3" color="secondary.main">Our History</Typography>
-                    <Stack spacing={3}>
-                        <Typography variant="body1">{firstAndSecondText}</Typography>
-                        <Typography variant="body1">{thirdText}</Typography>
-                    </Stack>
-                </Stack>
+                <Box width='50%'>
+                    <motion.div
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{once: true}}
+                        variants={Variants.moveRight}
+                    >
+                        <Box><ImageOffset src={HistoryImage} color="secondary.faint" direction="right" /></Box>
+                    </motion.div>
+                </Box>
+                <Box width='40%'>
+                    <motion.div
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{once: true}}
+                        variants={Variants.fadeIn}
+                    >
+                        <Stack spacing={5}>
+                            <Typography variant="h3" color="secondary.main">Our History</Typography>
+                            <Stack spacing={3}>
+                                <Typography variant="body1">{firstAndSecondText}</Typography>
+                                <Typography variant="body1">{thirdText}</Typography>
+                            </Stack>
+                        </Stack>
+                    </motion.div>
+                </Box>
             </Stack>
             
         </Stack>
