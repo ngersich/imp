@@ -22,7 +22,7 @@ function Sites() {
                             initial="offscreen"
                             whileInView="onscreen"
                             viewport={{once: true}}
-                            variants={Variants.fadeIn}
+                            variants={Variants.moveLeftMobile}
                         >
                             <Box><ImageOffset src={SiteImage} color="primary.faint" direction="left" /></Box>
                         </motion.div>

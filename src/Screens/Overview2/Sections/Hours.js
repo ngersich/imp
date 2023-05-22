@@ -56,7 +56,7 @@ function Hours() {
                             initial="offscreen"
                             whileInView="onscreen"
                             viewport={{once: true}}
-                            variants={Variants.fadeIn}
+                            variants={Variants.moveRightMobile}
                         >
                             <Stack alignItems='center'>
                                 <ImageOffset src={HoursImage} color="secondary.faint" direction="right" />

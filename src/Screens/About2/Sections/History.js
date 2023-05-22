@@ -52,7 +52,7 @@ function History() {
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{once: true}}
-                        variants={Variants.fadeIn}
+                        variants={Variants.moveRightMobile}
                     >
                         <Box><ImageOffset src={HistoryImage} color="secondary.faint" direction="right" /></Box>
                     </motion.div>

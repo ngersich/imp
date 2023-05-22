@@ -56,7 +56,7 @@ function Mission() {
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{once: true}}
-                                variants={Variants.fadeIn}
+                                variants={Variants.moveLeftMobile}
                         >
                             <Box>
                                 <ImageOffset src={MissionImage1} color="primary.faint" direction="left" />

@@ -1,10 +1,12 @@
 const Variants = {
     moveRight: {
         offscreen: {
-        x: -500
+        x: -300,
+        opacity: 0,
         },
         onscreen: {
         x: 0,
+        opacity: 1,
         transition: {
             type: "spring",
             bounce: 0.2,
@@ -15,10 +17,12 @@ const Variants = {
 
     moveLeft: {
         offscreen: {
-            x: 500
+            x: 300,
+            opacity: 0
         },
         onscreen: {
             x: 0,
+            opacity: 1,
             transition: {
                 type: "spring",
                 bounce: 0.2,
@@ -29,10 +33,12 @@ const Variants = {
 
     moveRightMobile: {
         offscreen: {
-        x: -300
+        x: -100,
+        opacity: 0,
         },
         onscreen: {
         x: 0,
+        opacity: 1,
         transition: {
             type: "spring",
             bounce: 0.2,
@@ -43,10 +49,12 @@ const Variants = {
 
     moveLeftMobile: {
         offscreen: {
-            x: 300
+            x: 100,
+            opacity: 0
         },
         onscreen: {
             x: 0,
+            opacity: 1,
             transition: {
                 type: "spring",
                 bounce: 0.2,
@@ -57,14 +65,16 @@ const Variants = {
 
     fadeIn: {
         offscreen: {
-            opacity: 0
+            opacity: 0,
+            y: 50,
         },
         onscreen: {
             opacity: 1,
+            y: 0,
             transition: {
                 type: "spring",
-                bounce: 0.0,
-                duration: 3.0
+                bounce: 0.2,
+                duration: 2.0
             }
         }
     }

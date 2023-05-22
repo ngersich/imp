@@ -23,10 +23,17 @@ function ImageSection() {
             </Box>
 
             <Stack display={{xs: 'inline', md: 'none'}} alignItems='center' marginLeft='20px' marginRight='20px'>
-                <Stack alignItems='center' marginTop={5} marginBottom={5}>
-                    <ImageGroup fullScreen={false} />
-                    <GalleryButton />
-                </Stack>
+                <motion.div
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{once: true}}
+                    variants={Variants.fadeIn}
+                >
+                    <Stack alignItems='center' marginTop={8} marginBottom={8}>
+                        <ImageGroup fullScreen={false} />
+                        <GalleryButton />
+                    </Stack>
+                </motion.div>
             </Stack>
 
 

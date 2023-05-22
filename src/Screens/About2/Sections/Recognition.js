@@ -68,7 +68,7 @@ function Mission() {
                             initial="offscreen"
                             whileInView="onscreen"
                             viewport={{once: true}}
-                            variants={Variants.fadeIn}
+                            variants={Variants.moveLeftMobile}
                         >
                             <Box>
                                 <ImageOffset src={RecognitionImage} color="primary.faint" direction="left" />
