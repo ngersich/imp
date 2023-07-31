@@ -5,6 +5,7 @@ import './HowToJoin.css';
 import Footer from "../../Components/Footer/Footer";
 import ImageOffset from "../../Components/ImageGroup/ImageOffset";
 import HowToJoinImage from '../../../src/Components/ImageGroup/Images/HowToJoin2/IMG_0434.jpg';
+import ApplyButton from "./Components/ApplyButton/ApplyButton";
 
 
 function HowToJoin2() {
@@ -17,9 +18,12 @@ function HowToJoin2() {
                     <Box width={{xs: '100%', md: '55%'}}>
                         <Typography variant="h1" color="primary.main" textAlign={{xs: 'center', md: 'left'}}>How to Join IMP</Typography>
                         {/* <Typography variant="h4" textAlign="center" color="primary"><i>Spring 2023</i></Typography> */}
-                        <Typography variant="h5" color="secondary" sx={{paddingTop: '10px'}}><b>Applications for Spring 2023 have closed. Check back next fall!</b></Typography>
+                        <Typography variant="h5" color="secondary" sx={{paddingTop: '10px'}}><b>Applications for Spring 2023 have closed. Fill out our interest form below, and we'll contact you when applications open!</b></Typography>
                         <Stack>
-                            <Stack sx={{width: {xs: '100%', md: '80%'}}}>
+                            <Stack sx={{width: {xs: '100%', md: '80%'}, marginTop: '20px'}}>
+                                <Stack alignItems='center'>
+                                    <ApplyButton text='Mentor Interest Form' href='https://forms.gle/53kSe9R1xfNqRzWU7'/>
+                                </Stack>
                                 <ol className="orderedListStyle">
                                     <li className="orderedListEl"><Typography className="listHeading" variant="body1" fontSize='1.3rem'>Attend an info session (optional):</Typography></li>
                                     <ul>
@@ -56,11 +60,9 @@ function HowToJoin2() {
                             </Stack>
                         </Stack>
                     </Box>
-                    
-                    <Stack width={{xs: '80%', md: '40%'}} alignItems='center'>
-                        <ImageOffset src={HowToJoinImage} color="primary.faint" />
-                    </Stack>
-
+                        <Stack width={{xs: '80%', md: '40%'}} alignItems='center'>
+                            <ImageOffset src={HowToJoinImage} color="primary.faint" />
+                        </Stack>
                 </Stack>
 
                 

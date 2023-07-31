@@ -1,38 +1,6 @@
 const Variants = {
     moveRight: {
         offscreen: {
-        x: -300,
-        opacity: 0,
-        },
-        onscreen: {
-        x: 0,
-        opacity: 1,
-        transition: {
-            type: "spring",
-            bounce: 0.2,
-            duration: 2.0
-        }
-        }
-    },
-
-    moveLeft: {
-        offscreen: {
-            x: 300,
-            opacity: 0
-        },
-        onscreen: {
-            x: 0,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                bounce: 0.2,
-                duration: 2.0
-            }
-        }
-    },
-
-    moveRightMobile: {
-        offscreen: {
         x: -100,
         opacity: 0,
         },
@@ -42,12 +10,12 @@ const Variants = {
         transition: {
             type: "spring",
             bounce: 0.2,
-            duration: 2.0
+            duration: 3.0
         }
         }
     },
 
-    moveLeftMobile: {
+    moveLeft: {
         offscreen: {
             x: 100,
             opacity: 0
@@ -58,7 +26,43 @@ const Variants = {
             transition: {
                 type: "spring",
                 bounce: 0.2,
-                duration: 2.0
+                duration: 3.0
+            }
+        }
+    },
+
+    moveRightMobile: {
+        offscreen: {
+        // x: -20,
+        y: 50,
+        opacity: 0,
+        },
+        onscreen: {
+        // x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: "spring",
+            bounce: 0.2,
+            duration: 3.0
+        }
+        }
+    },
+
+    moveLeftMobile: {
+        offscreen: {
+            // x: 20,
+            y: 50,
+            opacity: 0
+        },
+        onscreen: {
+            // x: 0,
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                bounce: 0.2,
+                duration: 3.0
             }
         }
     },
@@ -74,7 +78,7 @@ const Variants = {
             transition: {
                 type: "spring",
                 bounce: 0.2,
-                duration: 2.0
+                duration: 3.0
             }
         }
     }

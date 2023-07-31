@@ -8,12 +8,12 @@ function ApplyButton(props) {
         <Button 
             variant="outlined"
             color="googleForm"
-            sx={{textTransform: 'none', width: '280px', fontSize: '1.1rem'}}
+            sx={{textTransform: 'none', fontSize: '1.1rem'}}
             href={props.href ? props.href : ''}
             target="_blank"
             rel="noreferrer"
         >
-            <Stack direction="row" alignItems="center" justifyContent='space-between' sx={{width: '100%'}} >
+            <Stack direction="row" alignItems="center" spacing={3}  >
                 <Box component="img" alt="google_form_icon" src={GoogleFormIcon} height={40} />
                 <Box>{props.text}</Box>
             </Stack>

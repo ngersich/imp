@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../../Components/Header/Header";
+import Header from "../../../Components/Header/Header";
 import { Box, Stack, Typography, Link } from '@mui/material';
 import ApplyButton from "./Components/ApplyButton/ApplyButton";
 import JoinImage from '../../Components/ImageGroup/Images/About/IMG_0434.jpeg';
 import './HowToJoin.css';
-import Footer from "../../Components/Footer/Footer";
+import Footer from "../../../Components/Footer/Footer";
 
 function HowToJoin() {
     return (
