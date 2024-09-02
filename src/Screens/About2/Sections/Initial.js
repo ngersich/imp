@@ -7,6 +7,7 @@ import JoinButton from "../Components/JoinButton";
 import InstagramButton from '../Components/InstagramButton';
 import { motion } from 'framer-motion';
 import Variants from "../../../Components/Animations/Variants";
+import FacebookButton from "../Components/FacebookButton";
 
 function Initial() {
     const initialText = 'The Illini Mentor Program is a student-directed initiative at the University of Illinois that works closely with children in the Champaign-Urbana community. IMP focuses on the'
@@ -41,9 +42,10 @@ function Initial() {
                             <Box component="span" color="secondary.main" fontWeight='bold'> social development </Box>
                             {followingText}
                         </Typography>
-                        <Stack direction="row" alignItems='center' spacing={5}>
+                        <Stack direction="row" alignItems='center' spacing={2}>
                             <JoinButton handleJoinNavigation={handleJoinNavigation} />
                             <InstagramButton />
+                            <FacebookButton />
                         </Stack>
                     </Stack>    
                     </motion.div>
@@ -81,7 +83,10 @@ function Initial() {
                                 </Typography>
                                 <Stack alignItems='center' spacing={2}>
                                     <JoinButton handleJoinNavigation={handleJoinNavigation} />
-                                    <InstagramButton />
+                                    <Stack direction='row' spacing={3}>
+                                        <InstagramButton />
+                                        <FacebookButton />
+                                    </Stack>
                                 </Stack>
                             </Stack>  
                         </motion.div>

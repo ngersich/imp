@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {Box, Stack, Typography} from '@mui/material';
 import ExecCard from "../../Components/ExecCard/ExecCard";
 import ExecMembers from "../../Components/ExecCard/ExecMembers";
@@ -6,28 +6,29 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 
 function Exec2() {
-    useEffect(() => {
-        console.log(ExecMembers.slice(2, 7));
-    }, []);
     return (
         <Box>
             <Header currentPage='Executive Board' />
             <Stack spacing={2} marginRight={{xs: '20px', md: '100px'}} marginLeft={{xs: '20px', md: '100px'}} marginTop='30px' alignItems="center" >
                 <Typography variant="h1" textAlign='center' color="primary.main" >Executive Board</Typography>
+                {/* <Typography variant="body1" fontSize="1.3rem" textAlign="center" sx={{height: '200px'}}>Coming soon!</Typography> */}
+
                 <Typography variant="body1" fontSize="1.3rem" textAlign="center" display={{xs: 'none', md: 'inline'}}>Hover over each picture for more information!</Typography>
                 <Box sx={{width: '100%'}} display={{xs: 'none', md: 'none', lg: 'inline'}}>
-                    <Stack alignItems="center">
-                        <ExecCard color="primary" person={ExecMembers[0]} hover={true} />
-                    </Stack>
-                    <Box height={80} />
-                    <Stack direction="row" justifyContent="space-evenly" sx={{width: '100%'}} >
-                        {ExecMembers.slice(1, 6).map((member) => {
+                    <Stack direction="row" justifyContent="space-evenly" alignItems="center">
+                        {ExecMembers.slice(0, 4).map((member) => {
                             return <ExecCard color="primary" person={member} hover={true} />
                         })}
                     </Stack>
                     <Box height={80} />
                     <Stack direction="row" justifyContent="space-evenly" sx={{width: '100%'}} >
-                        {ExecMembers.slice(6, 12).map((member) => {
+                        {ExecMembers.slice(4, 9).map((member) => {
+                            return <ExecCard color="primary" person={member} hover={true} />
+                        })}
+                    </Stack>
+                    <Box height={80} />
+                    <Stack direction="row" justifyContent="space-evenly" sx={{width: '100%'}} >
+                        {ExecMembers.slice(9, 15).map((member) => {
                             return <ExecCard color="primary" person={member} hover={true} />
                         })}
                     </Stack>
@@ -35,11 +36,12 @@ function Exec2() {
 
 
                 <Box sx={{width: '100%'}} display={{xs: 'none', md: 'inline', lg: 'none'}}>
-                    <Stack direction="row" justifyContent="space-evenly" sx={{width: '100%'}} >
-                        <ExecCard color="primary" person={ExecMembers[0]} hover={true} />
-                        <ExecCard color="primary" person={ExecMembers[1]} hover={true} />
+                    <Stack direction="row" justifyContent="space-evenly" spacing={10} sx={{width: '100%'}} >
+                            {ExecMembers.slice(0, 2).map((member) => {
+                                return <ExecCard color="primary" person={member} hover={true} />
+                            })}
                     </Stack>
-                    <Box height={100}></Box>
+                    <Box height={80} />
                     <Stack direction="row" justifyContent="space-evenly" spacing={10} sx={{width: '100%'}} >
                         {ExecMembers.slice(2, 5).map((member) => {
                             return <ExecCard color="primary" person={member} hover={true} />
@@ -54,6 +56,12 @@ function Exec2() {
                     <Box height={80}></Box>
                     <Stack direction="row" justifyContent="space-evenly" spacing={10} sx={{width: '100%'}} >
                         {ExecMembers.slice(8, 11).map((member) => {
+                            return <ExecCard color="primary" person={member} hover={true} />
+                        })}
+                    </Stack>
+                    <Box height={80}></Box>
+                    <Stack direction="row" justifyContent="space-evenly" spacing={10} sx={{width: '100%'}} >
+                        {ExecMembers.slice(11, 14).map((member) => {
                             return <ExecCard color="primary" person={member} hover={true} />
                         })}
                     </Stack>

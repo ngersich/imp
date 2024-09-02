@@ -43,13 +43,13 @@ function Sites() {
                                     </Typography>
                                 </Stack>
                                 <Stack spacing={1}>
-                                <Typography variant="h5" color="primary.main">Don Moyer Boys and Girls Club (Sat)</Typography>
+                                <Typography variant="h5" color="primary.main">DREAAM (Sat)</Typography>
                                 <ul>
                                     <li><Typography variant="body1">Saturday (9:45 a.m. – 12:00 noon)</Typography></li>
                                     <li><Typography variant="body1">Mentees: 8-10 y/o</Typography></li>
                                     {/* <li><Typography variant="body1">201 E. Park Street, P.O. Box 1396</Typography><Typography variant="body1">Champaign, IL 61824</Typography></li> */}
                                     {/* <li><Typography variant="body1">Phone: (217) 355-5437</Typography></li> */}
-                                    <li><Link href="https://www.dmbgc-cu.org/" variant="body1">https://www.dmbgc-cu.org/</Link></li>
+                                    <li><Link href="https://www.dreaam.org/" variant="body1">https://www.dreaam.org/</Link></li>
                                 </ul>
                                 </Stack>
 

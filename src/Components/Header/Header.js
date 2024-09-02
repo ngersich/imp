@@ -44,24 +44,24 @@ function Header(props) {
     }
   };
 
-  // const getRoute = (page) => {
-  //   switch(page) {
-  //     case 'About IMP': 
-  //       return "/about";
-  //     case 'Our Mission':
-  //       return "/mission";
-  //     case 'Executive Board':
-  //       return "/exec";
-  //     case 'Program Overview':
-  //       return "/overview";
-  //     case 'How to Join':
-  //      return "/join";
-  //     case "":
-  //      return "/";
-  //     default:
-  //       return "/";
-  //   }
-  // }
+  const getRoute = (page) => {
+    switch(page) {
+      case 'About IMP': 
+        return "/about";
+      case 'Our Mission':
+        return "/mission";
+      case 'Executive Board':
+        return "/exec";
+      case 'Program Overview':
+        return "/overview";
+      case 'How to Join':
+       return "/join";
+      case "":
+       return "/";
+      default:
+        return "/";
+    }
+  }
 
   const [backdrop, setBackdrop] = useState(false);
 
@@ -123,10 +123,10 @@ function Header(props) {
               <Button
                 key={page}
                 component={Link}
-                // href={getRoute(page)}
-                onClick={(() => {
-                  handleNavigation(page);
-                })}
+                href={getRoute(page)}
+                // onClick={(() => {
+                //   handleNavigation(page);
+                // })}
                 sx={props.currentPage === page ? 
                   {my: 2, color: 'white', display: 'block', borderBottom: '2px solid white', borderRadius: '0', paddingRight: '0', paddingLeft: '0', marginRight: '10px', marginLeft: '10px'}
                 :
@@ -150,10 +150,10 @@ function Header(props) {
         {pages.map((page) => (
               <Button
                 key={page}
-                // href={getRoute(page)}
-                onClick={(() => {
-                  handleNavigation(page);
-                })}
+                href={getRoute(page)}
+                // onClick={(() => {
+                //   handleNavigation(page);
+                // })}
                 sx={
                   props.currentPage === page ? 
                   {my: 2, color: 'secondary.main', display: 'block', fontSize: '1.4rem'}
