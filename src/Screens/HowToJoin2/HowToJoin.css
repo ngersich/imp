@@ -1,0 +1,17 @@
+.orderedListStyle {
+    font-size: 1.2rem;
+    /* font-weight: 500; */
+}
+
+.orderedListEl {
+    margin-top: 10px;
+}
+
+.listHeading {
+    /* font-weight: 300; */
+}
+
+.applicationItems {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

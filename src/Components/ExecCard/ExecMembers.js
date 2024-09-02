@@ -1,104 +1,146 @@
-import AhmadImage from '../ImageGroup/Images/Exec/ahmad.jpeg';
-import AddisonImage from '../ImageGroup/Images/Exec/addison.jpeg';
+import AshleyImage from '../ImageGroup/Images/Exec/ashley.jpg';
+import AubreyImage from '../ImageGroup/Images/Exec/aubrey.jpg';
+import ClaudiaImage from '../ImageGroup/Images/Exec/claudia.jpg';
 import DanetteImage from '../ImageGroup/Images/Exec/danette.jpeg';
-import EmmaImage from '../ImageGroup/Images/Exec/emma.jpeg';
-import GraceImage from '../ImageGroup/Images/Exec/grace.jpeg';
-import JulieImage from '../ImageGroup/Images/Exec/julie.JPG';
-import LaurenImage from '../ImageGroup/Images/Exec/lauren.jpeg';
-import LydiaImage from '../ImageGroup/Images/Exec/lydia.jpeg';
-import ManasImage from '../ImageGroup/Images/Exec/manas.jpeg';
-import NoahImage from '../ImageGroup/Images/Exec/noah.jpeg';
-import ShivangImage from '../ImageGroup/Images/Exec/shivang.JPEG';
+import JustinImage from '../ImageGroup/Images/Exec/justin.jpg';
+import KavyaImage from '../ImageGroup/Images/Exec/kavya.jpg';
+import LaurenImage from '../ImageGroup/Images/Exec/lauren.jpg';
+import LiliImage from '../ImageGroup/Images/Exec/lili.jpg';
+import LilyImage from '../ImageGroup/Images/Exec/lily.jpg';
+import NicoleImage from '../ImageGroup/Images/Exec/nicole.jpg';
+import NoahImage from '../ImageGroup/Images/Exec/noah.jpg';
+import SatyamImage from '../ImageGroup/Images/Exec/satyam.jpg';
+import SuhasniImage from '../ImageGroup/Images/Exec/suhasni.jpg';
+import TrishaImage from '../ImageGroup/Images/Exec/trisha.jpg';
+
 
 const ExecMembers = [
-    {
-        name: "Grace Beyers",
-        role: "President",
-        year: "Junior",
-        major: "Human development and family studies",
-        contact: "gbeyers2@illinos.edu",
-        src: GraceImage
-    },
-    {
-        name: "Danette Denham",
-        role: "Member Development Officer",
-        year: "Sophomore",
-        major: "Molecular & Cellular Biology",
-        contact: "ddenham2@illinois.edu",
-        src: DanetteImage
-    },
-    {
-        name: "Julie Mathews",
-        year: "Junior",
-        role: "Communications & Outreach",
-        major: "Molecular & Cellular Biology",
-        contact: "jmathe40@illinois.edu",
-        src: JulieImage
-    },
-    {
-        name: "Emma Creque",
-        year: "Senior",
-        role: "Finance Director",
-        major: "Animal Sciences",
-        contact: "ecreque2@illinois.edu",
-        src: EmmaImage
-    },
-    {
-        name: "Lydia Taylor",
-        year: "Junior",
-        role: "Programs Director",
-        major: "Materials Science & Engineering",
-        contact: "lct2@illinois.edu",
-        src: LydiaImage
-    },
-    {
-        name: "Ahmad Bobat",
-        year: "Junior",
-        role: "Programs Director",
-        major: "Molecular & Ceullular Biology",
-        contact: "bobat2@illinois.edu",
-        src: AhmadImage
-    },
-    {
-        name: "Manas Gajjela",
-        year: "Junior",
-        role: "Saturday Site Supervisor",
-        major: "Molecular & Ceullular Biology",
-        contact: "mgajje2@illinois.edu",
-        src: ManasImage
-    },
-    {
-        name: "Shivang Bhaskar",
-        year: "Junior",
-        role: "Saturday Site Supervisor",
-        major: "Molecular & Cellular Biology",
-        contact: "sbhask21@illinois.edu",
-        src: ShivangImage
-    },
-    {
-        name: "Addison Prall",
-        year: "Freshman",
-        role: "Wednesday Site Supervisor",
-        major: "Middle School Education (History)",
-        contact: "aprall2@illinois.edu",
-        src: AddisonImage
-    },
-    {
-        name: "Lauren Lane",
-        year: "Sophomore",
-        role: "Wednesday Site Supervisor",
-        major: "Molecular & Cellular Biology",
-        contact: "lmlane2@illinois.edu",
-        src: LaurenImage
-    },
-    {
-        name: "Noah Gersich",
-        year: "Sophomore",
-        role: "Tuesday Site Supervisor",
-        major: "Computer Science",
-        contact: "gersich2@illinois.edu",
-        src: NoahImage
-    }
+ {
+    name: "Lauren Lane",
+    firstName: "Lauren",
+    role: "President",
+    year: "Senior",
+    major: "Chemistry and Molecular & Cellular Biology",
+    contact: "lmlane2@illinois.edu",
+    src: LaurenImage
+ },
+ {
+    name: "Lili Cleaveland",
+    firstName: "Lili",
+    role: "Member Development Officer",
+    year: "Junior",
+    major: "Neuroscience",
+    contact: "lc29@illinois.edu",
+    src: LiliImage
+ },
+ {
+    name: "Justin Dyser",
+    firstName: "Justin",
+    role: "Member Development Officer",
+    year: "Sophomore",
+    major: "Information Systems",
+    contact: "jdyser2@illinois.edu",
+    src: JustinImage
+ },
+ {
+    name: "Aubrey Cervantes",
+    firstName: "Aubrey",
+    role: "Communications & Outreach",
+    year: "Senior",
+    major: "Kinesiology",
+    contact: "aubreyc2@illinois.edu",
+    src: AubreyImage
+ },
+ {
+    name: "Noah Gersich",
+    firstName: "Noah",
+    role: "Communications & Outreach",
+    year: "Senior",
+    major: "Computer Science",
+    contact: "gersich2@illinois.edu",
+    src: NoahImage
+ },
+ {
+    name: "Suhasni Venkatsubrahmmanian",
+    firstName: "Suhasni",
+    role: "Finance Director",
+    year: "Senior",
+    major: "Healthcare Administration",
+    contact: "suhasni2@illinois.edu",
+    src: SuhasniImage
+ },
+ {
+    name: "Kavya Bomma",
+    firstName: "Kavya",
+    role: "Programs Director",
+    year: "Senior",
+    major: "Crop Science",
+    contact: "kbomma2@illinois.edu",
+    src: KavyaImage
+ },
+ {
+    name: "Lily Dokhanchi",
+    firstName: "Lily",
+    role: "Programs Director",
+    year: "Senior",
+    major: "English and Creative Writing",
+    contact: "lilyd2@illinois.edu",
+    src: LilyImage
+ },
+ {
+    name: "Ashley Kim",
+    firstName: "Ashley",
+    role: "Saturday Site Supervisor",
+    year: "Senior",
+    major: "Kinesiology",
+    contact: "akim237@illinois.edu",
+    src: AshleyImage
+ },
+ {
+    name: "Trisha Pal",
+    firstName: "Trisha",
+    role: "Saturday Site Supervisor",
+    year: "Senior",
+    major: "Molecular & Cellular Biology",
+    contact: "trishap2@illinois.edu",
+    src: TrishaImage
+ },
+ {
+    name: "Danette Denham",
+    firstName: "Danette",
+    role: "Wednesday Site Supervisor",
+    year: "Senior",
+    major: "Molecular & Cellular Biology",
+    contact: "ddenham2@illinois.edu",
+    src: DanetteImage
+ },
+ {
+    name: "Satyam Malhotra",
+    firstName: "Satyam",
+    role: "Wednesday Site Supervisor",
+    year: "Junior",
+    major: "Psychology and Information Sciences",
+    contact: "satyamm2@illinois.edu",
+    src: SatyamImage
+ },
+ {
+    name: "Nicole Zagone",
+    firstName: "Nicole",
+    role: "Tuesday Site Supervisor",
+    year: "Junior",
+    major: "Community Health & Political Science",
+    contact: "nzagone2@illinois.edu",
+    src: NicoleImage
+ },
+ {
+   name: "Claudia Majercak",
+   firstName: "Claudia",
+   role: "Tuesday Site Supervisor",
+   year: "Junior",
+   major: "Mathematics w/ Secondary Ed Concentration",
+   contact: "cm82@illinois.edu",
+   src: ClaudiaImage
+}
 ]
 
 export default ExecMembers

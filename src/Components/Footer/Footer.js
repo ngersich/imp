@@ -1,97 +1,97 @@
-import React, { useState } from "react";
-import { AppBar, Box, Toolbar, Container, Button, TextField, Stack, Typography, Alert, Collapse, IconButton } from '@mui/material';
+import React from "react";
+import { AppBar, Box, Toolbar, Container, Button, Stack, Typography, Link } from '@mui/material';
 import ImpLogo from './IMPLogo.png';
-import CloseIcon from '@mui/icons-material/Close';
+// import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from "react-router-dom";
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { makeStyles } from "@mui/styles";
-import axios from "axios";
-import validator from 'validator';
+// import { makeStyles } from "@mui/styles";
+// import axios from "axios";
+// import validator from 'validator';
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      "& .MuiFilledInput-root": {
-        backgroundColor: "rgb(65, 86, 125)",
-        fontSize: '0.9rem',
-        color: "#fff"
-      },
-      "& .MuiFilledInput-root:hover": {
-        backgroundColor: "#4e6897",
-        color: "#fff",
-        // Reset on touch devices, it doesn't add specificity
-        "@media (hover: none)": {
-          backgroundColor: "#4e6897",
-          color: "#fff"
-        }
-      },
-      "& .MuiFilledInput-root.Mui-focused": {
-        backgroundColor: "#4e6897",
-        color: "#fff"
-      },
-      "& .MuiInputLabel-root": {
-        fontSize: "0.95rem",
-        color: "#fff"
-      }
-    }
-  }));
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//       "& .MuiFilledInput-root": {
+//         backgroundColor: "rgb(65, 86, 125)",
+//         fontSize: '0.9rem',
+//         color: "#fff"
+//       },
+//       "& .MuiFilledInput-root:hover": {
+//         backgroundColor: "#4e6897",
+//         color: "#fff",
+//         // Reset on touch devices, it doesn't add specificity
+//         "@media (hover: none)": {
+//           backgroundColor: "#4e6897",
+//           color: "#fff"
+//         }
+//       },
+//       "& .MuiFilledInput-root.Mui-focused": {
+//         backgroundColor: "#4e6897",
+//         color: "#fff"
+//       },
+//       "& .MuiInputLabel-root": {
+//         fontSize: "0.95rem",
+//         color: "#fff"
+//       }
+//     }
+//   }));
 
 function Footer(props) {
 
-  const classes = useStyles();
+  // const classes = useStyles();
   let navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
-  const [alertType, setAlertType] = useState("");
-  const [alertOpen, setAlertOpen] = useState(false);
-  const [alertText, setAlertText] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [alertType, setAlertType] = useState("");
+  // const [alertOpen, setAlertOpen] = useState(false);
+  // const [alertText, setAlertText] = useState("");
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  // };
 
-  const instagramUrl = "https://www.instagram.com/impuofi/";
+  const instagramUrl = "https://www.instagram.com/impuiuc/";
   const handleInstagram = () => {
     window.open(instagramUrl, '_blank', 'noopener,noreferrer');
   };
 
-  const handleSignUp = () => {
+  // const handleSignUp = () => {
 
-    if (!validator.isEmail(email)) {
-      setAlertOpen(true);
-      setAlertType("error");
-      setAlertText("Please enter a valid email address.");
-      return;
-    }
+  //   if (!validator.isEmail(email)) {
+  //     setAlertOpen(true);
+  //     setAlertType("error");
+  //     setAlertText("Please enter a valid email address.");
+  //     return;
+  //   }
 
-    const date = new Date();
-    const dateString = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+  //   const date = new Date();
+  //   const dateString = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
 
-    axios.post('https://sheet.best/api/sheets/10b48f9b-a5c4-4da5-8dbc-02f6e81b83f9', {"email": email, "date": dateString})
-    .then(response => {
-      setAlertOpen(true);
-      setAlertType("success");
-      setAlertText("Email was successfully added to our mailing list.");
-      setEmail("");
-    }).catch( e => {
-      axios.post('https://sheet.best/api/sheets/61be34ca-fbe9-4a08-b887-608d3f60ec22', {"email": email, "date": dateString})
-      .then(response => {
-        setAlertOpen(true);
-        setAlertType("success");
-        setAlertText("Email was successfully added to our mailing list.");
-        setEmail("");
-      }).catch(e => {
-        setAlertOpen(true);
-        setAlertType("error");
-        setAlertText("There was an error processing your email. If the issue persists, please contact impuofi@gmail.com or check back later when applications open.")
-      })
-    })
-  };
+  //   axios.post('https://sheet.best/api/sheets/10b48f9b-a5c4-4da5-8dbc-02f6e81b83f9', {"email": email, "date": dateString})
+  //   .then(response => {
+  //     setAlertOpen(true);
+  //     setAlertType("success");
+  //     setAlertText("Email was successfully added to our mailing list.");
+  //     setEmail("");
+  //   }).catch( e => {
+  //     axios.post('https://sheet.best/api/sheets/61be34ca-fbe9-4a08-b887-608d3f60ec22', {"email": email, "date": dateString})
+  //     .then(response => {
+  //       setAlertOpen(true);
+  //       setAlertType("success");
+  //       setAlertText("Email was successfully added to our mailing list.");
+  //       setEmail("");
+  //     }).catch(e => {
+  //       setAlertOpen(true);
+  //       setAlertType("error");
+  //       setAlertText("There was an error processing your email. If the issue persists, please contact impuofi@gmail.com or check back later when applications open.")
+  //     })
+  //   })
+  // };
 
 
   return (
     <Box sx={{height: 'maxHeight'}}>
-    <Collapse in={alertOpen}>
+    {/* <Collapse in={alertOpen}>
         <Alert
         severity={alertType}
         variant="filled"
@@ -111,7 +111,7 @@ function Footer(props) {
         >
         {alertText}
         </Alert>
-    </Collapse>
+    </Collapse> */}
     <AppBar position="static" sx={{display: {xs: 'none', md: 'flex'}}}>
        <Container maxWidth="xl" >
         <Toolbar disableGutters sx={{height: "140px"}}>
@@ -128,25 +128,26 @@ function Footer(props) {
             <Stack direction="row" spacing={8} marginTop="5px">
                 <Stack>
                     <Typography variant="h6">Email</Typography>
-                    <Typography variant="body2">impuofi@gmail.com</Typography>
+                    <Link href='mailto:impuofi@gmail.com' variant="body2" underline="hover" color='#fff'>impuofi@gmail.com</Link>
                 </Stack>
                 <Stack>
                     <Typography variant="h6">Instagram</Typography>
                     <Stack direction="row" spacing={1} onClick={handleInstagram} sx={{cursor: 'pointer'}} >
                         <InstagramIcon />
-                        <Typography variant="body2">@impuofi</Typography>
+                        <Typography variant="body2">@impuiuc</Typography>
                     </Stack>
                 </Stack>
             </Stack>
           </Stack>
           <Stack spacing={.5} sx={{width: '400px'}} >
             <Typography variant="h5">Stay informed</Typography>
-            <Typography variant="body2">Enter your email to be added to our mailing list.</Typography>
+            <Typography variant="body2">Fill out our interest form to be added to our mailing list.</Typography>
             <Box height="1px"></Box>
-            <Stack direction="row" justifyContent="space-between">
+            {/* <Stack direction="row" justifyContent="space-between">
                 <TextField variant="filled" label="Email Address" size="small" value={email} onChange={handleEmailChange} className={classes.root} sx={{width: "75%"}}  />
                 <Button color="secondary" variant="contained" onClick={handleSignUp}>Sign Up</Button>
-            </Stack>
+            </Stack> */}
+            <Button color="secondary" variant="contained" href='https://forms.gle/53kSe9R1xfNqRzWU7' sx={{width: '350px'}}>Mentor Interest Form</Button>
           </Stack>
           </Stack>
         </Toolbar>
@@ -168,7 +169,7 @@ function Footer(props) {
             <Stack direction="row" spacing={8} marginTop="5px">
                 <Stack>
                     <Typography variant="h6">Email</Typography>
-                    <Typography variant="body2">impuofi@gmail.com</Typography>
+                    <Link href='mailto:impuofi@gmail.com' variant="body2" underline="none" color='#fff'>impuofi@gmail.com</Link>
                 </Stack>
                 <Stack>
                     <Typography variant="h6">Instagram</Typography>
@@ -181,12 +182,13 @@ function Footer(props) {
 
         <Stack alignItems="center" sx={{width: '95%', maxWidth: "500px"}} >
             <Typography variant="h5" sx={{marginTop: "25px", marginBottom: "5px"}}>Stay informed</Typography>
-            <Typography variant="body2" textAlign="center" >Enter your email to be added to our mailing list.</Typography>
+            <Typography variant="body2" textAlign="center" >Fill out our interest form to be added to our mailing list.</Typography>
             <Box height="5px"></Box>
-            <Stack direction="row" justifyContent="space-between" width="100%">
+            {/* <Stack direction="row" justifyContent="space-between" width="100%">
                 <TextField variant="filled" label="Email Address" size="small" className={classes.root} sx={{width: "100%"}} value={email} onChange={handleEmailChange}  />
                 <Button color="secondary" variant="contained" sx={{width: "120px", marginLeft: "15px"}} onClick={handleSignUp}>Sign Up</Button>
-            </Stack>
+            </Stack> */}
+            <Button color="secondary" variant="contained" href='https://forms.gle/53kSe9R1xfNqRzWU7' sx={{width: '300px'}}>Mentor Interest Form</Button>
         </Stack>
 
         </Stack>      
