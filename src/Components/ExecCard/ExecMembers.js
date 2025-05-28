@@ -1,5 +1,5 @@
-import AshleyImage from '../ImageGroup/Images/Exec/ashley.jpg';
 import AubreyImage from '../ImageGroup/Images/Exec/aubrey.jpg';
+import CadenImage from '../ImageGroup/Images/Exec/caden.jpeg';
 import ClaudiaImage from '../ImageGroup/Images/Exec/claudia.jpg';
 import DanetteImage from '../ImageGroup/Images/Exec/danette.jpeg';
 import JustinImage from '../ImageGroup/Images/Exec/justin.jpg';
@@ -11,7 +11,7 @@ import NicoleImage from '../ImageGroup/Images/Exec/nicole.jpg';
 import NoahImage from '../ImageGroup/Images/Exec/noah.jpg';
 import SatyamImage from '../ImageGroup/Images/Exec/satyam.jpg';
 import SuhasniImage from '../ImageGroup/Images/Exec/suhasni.jpg';
-import TrishaImage from '../ImageGroup/Images/Exec/trisha.jpg';
+import VincentImage from '../ImageGroup/Images/Exec/vincent.jpeg';
 
 
 const ExecMembers = [
@@ -88,22 +88,22 @@ const ExecMembers = [
     src: LilyImage
  },
  {
-    name: "Ashley Kim",
-    firstName: "Ashley",
+    name: "Vincent Cui",
+    firstName: "Vincent",
     role: "Saturday Site Supervisor",
-    year: "Senior",
-    major: "Kinesiology",
-    contact: "akim237@illinois.edu",
-    src: AshleyImage
+    year: "Sophomore",
+    major: "Finance & Data Science",
+    contact: "vwcui2@illinois.edu",
+    src: VincentImage
  },
  {
-    name: "Trisha Pal",
-    firstName: "Trisha",
+    name: "Caden Pacheco",
+    firstName: "Caden",
     role: "Saturday Site Supervisor",
-    year: "Senior",
-    major: "Molecular & Cellular Biology",
-    contact: "trishap2@illinois.edu",
-    src: TrishaImage
+    year: "Sophomore",
+    major: "History",
+    contact: "cadenp2@illinois.edu",
+    src: CadenImage
  },
  {
     name: "Danette Denham",
